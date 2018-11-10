@@ -16,10 +16,21 @@
 				require "Controladores/UsuariosController.php";
 				usuariosController::main($action);
 				break;
+
+            case"producto":
+                require "Controladores/productosController.php";
+                productosController::main($action);
+                break;
+
 			case "administrador":
 				require "Controladores/AdministradorController.php";
 				productosController::main($action);
 				break;
+
+            case "alquiler":
+                require "Controladores/alquilerController.php";
+                productosController::main($action);
+                break;
 			default;
 				require "Controladores/homeController.php";
 				homecontroller::main($action);
