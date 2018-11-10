@@ -1,5 +1,5 @@
 <?php 
-   
+    require_once ("Modelos/Usuarios.php");
     session_start();
 	$action = "home";
 	$controller = "home";
@@ -21,11 +21,20 @@
 				require "Controladores/productosController.php";
 				productosController::main($action);
 				break;
+            case"producto":
+                require "Controladores/productosController.php";
+                productosController::main($action);
+                break;
 
 			case "administrador":
 				require "Controladores/AdministradorController.php";
 				productosController::main($action);
 				break;
+
+            case "alquiler":
+                require "Controladores/alquilerController.php";
+                productosController::main($action);
+                break;
 			default;
 				require "Controladores/homeController.php";
 				homecontroller::main($action);
