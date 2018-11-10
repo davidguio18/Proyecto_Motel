@@ -46,6 +46,21 @@ public function save($nom, $mar ,$can, $pre, $est){
   }
 
 
+  public function update(){
+
+		
+	$conexion = $this->getConexion();
+	$stm = $conexion->prepare("UPDATE productos SET nombre = :nombre, marca= :marca, cantidad = :cantidad, precio = :precio, estado =:estado WHERE id_producto = :id");
+	$stm->bindParam(":nombre",$this->nombre);
+	$stm->bindParam(":marca",$this->marca);
+	$stm->bindParam(":cantidad",$this->cantidad);
+	$stm->bindParam(":precio",$this->precio);
+	$stm->bindParam(":estado",$this->estado);
+	$stm->bindParam(":id",$this->id_producto);
+
+	$stm->execute();
+	
+  }
 
   public function findByPk($id){
   	$conexion = $this->getConexion();
@@ -56,6 +71,14 @@ public function save($nom, $mar ,$can, $pre, $est){
 	$stm->fetch();
 }
 
+public function delete($id){
+  	$conexion = $this->getConexion();
+  	$stm = $conexion->prepare("DELETE FROM productos WHERE id_producto = :id");
+  	
+ 	$stm->bindParam(":id",$id);
+	$stm->execute();
+	
+}
 
 
 
