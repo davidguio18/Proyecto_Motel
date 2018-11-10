@@ -29,8 +29,39 @@ class Usuarios extends Conexion{
 		$stm = $conexion-> prepare("INSERT INTO usuarios VALUES (:id_usuario,:nombres,:apellidos,:perfil,:documento,:contrasena)");
 		return $stm->execute((array) $this);
 	}
-	
-	
+	public function update(){
+
+		$conexion = $this->getConexion();
+		$stm = $conexion-> prepare("UPDATE usuarios SET nombres = :nombres, apellidos = :apellidos, perfil = :perfil, documento = :documento, contrasena = :contrasena WHERE id_usuario = :id");
+		 
+		 $stm->bindParam(":nombres",$this->nombres);
+		 $stm->bindParam(":apellidos",$this->apellidos);
+		 $stm->bindParam(":perfil",$this->perfil);
+		 $stm->bindParam(":documento",$this->documento);
+		 $stm->bindParam(":contrasena",$this->contrasena);
+		
+		 $stm->bindParam(":id",$this->id_usuario);
+
+		 $stm->execute();
+	}
+	public function findByPk($id){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("SELECT * FROM Usuarios WHERE id_usuario = :id");
+		$stm ->setFetchMode(PDO::FETCH_INTO,$this);
+
+		$stm->bindParam(":id",$id);
+		$stm-> execute();
+		$stm->fetch();
+		
+	}
+	public function delete($id){
+		$conexion = $this->getConexion();
+		$stm =$conexion->prepare("DELETE FROM Usuarios WHERE id_usuario = :id");
+
+		$stm->bindParam(":id",$id);
+		$stm->execute();
+
+}
 
 	public function vew (){
 		$conexion = $this->getConexion();
