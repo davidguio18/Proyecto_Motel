@@ -55,6 +55,26 @@ class habitaciones extends Conexion {
 		$stm->execute();
 	}
 
+	public function delete($id){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("DELETE FROM habitaciones WHERE id_habitacion = :id");
+		$stm->bindParam(":id",$id);
+		$stm->execute();
+	}
+
+	public function listar(){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("SELECT * FROM habitaciones");
+		$stm->setFetchMode(PDO::FETCH_CLASS,'habitaciones');
+
+		$habitaciones = array();
+		$stm->execute();
+
+		while ($obj = $stm->fetch()) {
+			$habitaciones[]=$obj;
+		}
+		return $habitaciones;
+	}
 }
 
 	?>
