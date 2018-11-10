@@ -17,10 +17,6 @@
 				usuariosController::main($action);
 				break;
 
-			case"producto":
-				require "Controladores/productosController.php";
-				productosController::main($action);
-				break;
             case"producto":
                 require "Controladores/productosController.php";
                 productosController::main($action);
