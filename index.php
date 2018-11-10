@@ -1,7 +1,5 @@
 <?php
-
-    
-
+   
     session_start();
 	$action = "home";
 	$controller = "home";
@@ -15,7 +13,7 @@
 	
 		switch ($controller) {
 			case "usuarios":
-				require "Controladores/UsuariosController.php";
+				require "Controladores/usuariosController.php";
 				usuariosController::main($action);
 				break;
 
