@@ -1,6 +1,6 @@
 <?php 
 //clase
-require "Modelos/Usuarios.php";
+require_once("Modelos/Usuarios.php");
 
 class usuariosController{
 	public static function main ($action){
@@ -38,7 +38,8 @@ class usuariosController{
 			
 
 			$usuarios = new Usuarios();
-			$guardo = $usuarios->save($nom,$ape,$per,$doc,$con);
+			$encrip = password_hash($con, PASSWORD_DEFAULT);
+			$guardo = $usuarios->save($nom,$ape,$per,$doc,$encrip);
 			if($guardo){
 				header("Location: index.php?c=usuarios&a=admin");
 			}else{
@@ -58,8 +59,42 @@ class usuariosController{
 	
 
 	private function vew(){
-			require "vistas/usuarios/vew.php";
+			require "vistas/usuarios/admin.php";
 	}
+
+	private function update(){
+		$usuario = new Usuarios();
+		$usuario->findByPk($_GET["id"]);
+
+		if(isset($_POST["Usuarios"])){
+		
+		$usuario->nombres = $_POST["Usuarios"]["nombres"];
+		$usuario->apellidos  = $_POST["Usuarios"]["apellidos"];
+		$usuario->perfil = $_POST ["Usuarios"]["perfil"];
+		$usuario->documento = $_POST["Usuarios"]["documento"];
+		$usuario->contrasena  = $_POST["Usuarios"]["contrasena"];
+			
+		$usuario->update();
+		header("Location: index.php?c=usuarios&a=admin");
+		}else{
+		require "Vistas/usuarios/update.php";
+		}
+	}
+
+
+private function delete(){
+		$usuario = new Usuarios();
+		if(isset($_GET["id"])){
+			$usuario->delete($_GET["id"]); 
+			
+			header("Location: index.php?c=usuarios&a=admin");
+		}
+
+	}
+
+
+
 }
+
 
  ?>
