@@ -28,6 +28,20 @@
 
 		}
 
+		public function update(){
+			$conexion =$this->getConexion();
+			$stm = $conexion->prepare("UPDATE vehiculos SET placa = :placa, marca = :marca, servicio = :servicio, registro = :registro  WHERE id_cliente = :id");
+
+			$stm->bindParam(":id",$this->id_cliente);
+			$stm->bindParam(":placa",$this->placa);
+			$stm->bindParam(":marca",$this->marca);
+			$stm->bindParam(":servicio",$this->servicio);
+			$stm->bindParam(":registro",$this->registro);
+
+			$stm-> execute();
+
+		}
+
 		public function findByPk($id){
 			$conexion =$this->getConexion();
 			$stm = $conexion->prepare("SELECT * FROM vehiculos WHERE id_cliente = :id");
@@ -53,6 +67,13 @@
 
 		}
 
+		public function delete($id){
+			$conexion =$this->getConexion();
+			$stm = $conexion->prepare("DELETE FROM vehiculos WHERE id_cliente = :id");
+			$stm->bindParam(":id",$id);
+			$stm->execute();
+
+		}
 		
 	}
 
