@@ -36,9 +36,9 @@
 				habitacionesController::main($action);
 				break;
 			case "vehiculos":
-			require "Controladores/vehiculosController.php";
-			vehiculocontroller::main($action);
-			break;
+				require "Controladores/vehiculosController.php";
+				vehiculocontroller::main($action);
+				break;
 			default;
 				require "Controladores/homeController.php";
 				homecontroller::main($action);
