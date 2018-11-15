@@ -52,9 +52,26 @@ class habitaciones extends Conexion {
 		$stm->fetch();
 		}
 		
+	public function update(){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("UPDATE habitaciones SET numero = :numero,
+		tipo = :tipo, valor_noche = :valor_noche, estado = :estado WHERE id_habitacion = :id");
 	
+		$stm->bindParam(":numero",$this->numero);
+		$stm->bindParam(":tipo",$this->tipo);
+		$stm->bindParam(":valor_noche",$this->valor_noche);
+		$stm->bindParam(":estado",$this->estado);
+		$stm->bindParam(":id",$this->id_habitacion);
 
-	
+		$stm->execute();
+	}
+
+	public function delete($id){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("DELETE FROM habitaciones WHERE id_habitacion = :id");
+		$stm->bindParam(":id",$id);
+		$stm->execute();
+	}
 
 	public function listar(){
 		$conexion = $this->getConexion();
@@ -70,7 +87,22 @@ class habitaciones extends Conexion {
 		return $habitaciones;
 	}
 
-	
+	public function view($id){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("SELECT * FROM habitaciones WHERE numero = :id or tipo = :id or estado = :id" );
+		$stm->bindParam(":id", $id);
+		$stm->bindParam(":tipo", $id);
+		$stm->bindParam(":estado", $id);
+		$stm->setFetchMode(PDO::FETCH_CLASS,'habitaciones');
+
+		$habitacion = array();
+		$stm->execute();
+
+		while ($obj = $stm->fetch()) {
+			$habitacion[]=$obj;
+		}
+		return $habitacion;
+}
 
 }
 	?>
