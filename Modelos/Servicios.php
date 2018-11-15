@@ -43,7 +43,38 @@
 
 		}
 
-		
+		public function update(){
+			$conexion =$this->getConexion();
+			$stm = $conexion->prepare("UPDATE servicios SET producto = :producto, precio = :precio, solicitud = :solicitud, alquiler = :alquiler, cantidad = :cantidad WHERE id_servicio = :id");
+
+			$stm->bindParam(":id",$this->id_servicio);
+			$stm->bindParam(":producto",$this->producto);
+			$stm->bindParam(":precio",$this->precio);
+			$stm->bindParam(":solicitud",$this->solicitud);
+			$stm->bindParam(":alquiler",$this->alquiler);
+			$stm->bindParam(":cantidad",$this->cantidad);
+
+			$stm->execute();
+
+		}
+
+		public function findByPk($id){
+			$conexion =$this->getConexion();
+			$stm = $conexion->prepare("SELECT * FROM servicios WHERE id_servicio = :id");
+			$stm->setFetchMode(PDO::FETCH_INTO,$this);
+			$stm->bindParam(":id",$id);
+			$stm->execute();
+			$stm->fetch();
+
+		}
+
+		public function delete($id){
+			$conexion =$this->getConexion();
+			$stm = $conexion->prepare("DELETE  FROM servicios WHERE id_servicio = :id");
+			$stm->bindParam(":id",$id);
+			$stm->execute();
+
+		}
 
 	}
 
