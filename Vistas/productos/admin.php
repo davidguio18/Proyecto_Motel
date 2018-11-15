@@ -54,12 +54,12 @@
                                                 <td>
                                                     <div class="table-data-feature">
                                                         
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar"> <a href="index.php?c=producto&a=update&id=<?=$producto->id_producto;?>"></a>
-                                                            <i class="zmdi zmdi-edit"> </i> 
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Eliminar"> <a href="index.php?c=producto&a=delete&id=<?=$producto->id_producto;?>">Eliminar</a>
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
+                                                         <a href="index.php?c=producto&a=update&id=<?=$producto->id_producto;?>"></a>
+                                                          
+                                                </td>
+                                                <td>
+                                                        <a href="index.php?c=producto&a=delete&id=<?=$producto->id_producto;?>">Eliminar</a>
+                                                                                                          
                                                         
                                                     </div>
                                                 </td>
