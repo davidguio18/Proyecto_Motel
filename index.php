@@ -39,6 +39,10 @@
 				require "Controladores/vehiculosController.php";
 				vehiculocontroller::main($action);
 				break;
+			case "servicios":
+				require "Controladores/serviciosController.php";
+				serviciosController::main($action);
+				break;	
 			default;
 				require "Controladores/homeController.php";
 				homecontroller::main($action);
