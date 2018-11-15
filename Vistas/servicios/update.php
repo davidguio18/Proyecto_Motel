@@ -1,27 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Actualizar servicio</title>
-</head>
-<body>
-	<h1>Actualizar Servicio</h1>
-	<form action="" method="post" autocomplete="off">
-		<label>Producto:</label>
-		<input type="text" name="Servicios[producto]" value="<?= $servicio->producto ?>">
+<?php include_once ("Vistas/cabecera.php"); ?>
 
-		<label>Precio:</label>
-		<input type="text" name="Servicios[precio]" value="<?= $servicio->precio ?>">
+<div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong> Actualizar </strong> Servicio
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="">
+                                            <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Producto</label>
+                                                <input type="text" id="nf-email"  name="Servicios[producto]" value="<?= $servicio->producto ?>"  class="form-control" >
+                                                
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Precio</label>
+                                                <input type="text" id="nf-email" name="Servicios[precio]"  class="form-control" value="<?= $servicio->precio ?>">
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Solicitud</label>
+                                                <input type="text" id="nf-email" name="Servicios[solicitud]" value="<?= $servicio->solicitud ?>" " class="form-control" >
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Alquiler</label>
+                                                <input type="number" id="nf-email" name="Servicios[alquiler]" value="<?= $servicio->alquiler ?>" class="form-control" >
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Cantidad</label>
+                                                <input type="number" id="nf-email" name="Servicios[cantidad]" value="<?= $servicio->cantidad ?>"  class="form-control">
+                                            </div>
+                                             <div class="card-footer">
+                                                 <button type="submit" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-dot-circle-o"></i> Editar
+                                                </button>
+                                               
+                                    </div>
+                                         
+                                        </form>
+                                    </div>
+                                    
+                                </div>
+                               
+                                
+                                </div>
+                            </div>
 
-		<label>Solicitud:</label>
-		<input type="text" name="Servicios[solicitud]" value="<?= $servicio->solicitud ?>">
-
-		<label>Alquiler:</label>
-		<input type="passsword" name="Servicios[alquiler]" value="<?= $servicio->alquiler ?>">
-
-		<label>Cantidad:</label>
-		<input type="passsword" name="Servicios[cantidad]" value="<?= $servicio->cantidad ?>">
-
-		<button type="submit">Actualizar</button>
-	</form>
-</body>
-</html>
+                            </div>
+                        </div>
+ <?php require_once("Vistas/footer.php"); ?>
