@@ -1,4 +1,4 @@
-<?php include_once ("cabecera.php"); ?>
+<?php include_once ("Vistas/cabecera.php"); ?>
 
 <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -41,7 +41,7 @@
                                                 <button type="reset" class="btn btn-danger btn-sm">
                                                     <i class="fa fa-ban"></i> Limpiar
                                                 </button>
-                                    </div>
+                                            </div>
                                          
                                         </form>
 
@@ -87,4 +87,4 @@ function Validacion(e){
 
                             </div>
                         </div>
- <?php require_once("footer.php"); ?>
+ <?php require_once("Vistas/footer.php"); ?>

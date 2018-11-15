@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <!-- DATA TABLE -->
-                                <h3 class="title-5 m-b-35">Lista Total de Productos</h3>
+                                <h3 class="title-5 m-b-35">Listado de Vehículos</h3>
                                 <div class="table-data__tool">
                                     <div class="table-data__tool-left">
                                         
@@ -29,7 +29,7 @@
                                                 <th>Placa</th>
                                                 <th>Marca</th>
                                                 <th>Servicio</th>
-                                                <th>Registgro</th>
+                                                <th>Registro</th>
                                                 <th colspan="2">Acciones</th>
                                                 
                                              
@@ -48,7 +48,7 @@
 				                                <td> <a href="index.php?c=vehiculos&a=update&id=<?= $vehiculo->id_cliente; ?>">Editar</a> </td>
 				                                <td> <a href="index.php?c=vehiculos&a=delete&id=<?= $vehiculo->id_cliente; ?>">Eliminar</a> </td>
 				
-			</tr>
+			                                     </tr>
                                             </tr>
                                             		<?php } ?>
                                             <tr class="spacer"></tr>

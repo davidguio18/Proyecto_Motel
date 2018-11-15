@@ -54,6 +54,10 @@
                                 <i class="fas fa-tachometer-alt"></i>Principal</a>
                             
                         </li>
+                          <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>Registrar Vehículo</a>
+                        </li>
                          <li>
                             <a href="#">
                                 <i class="fas fa-calendar-alt"></i>Registrar Alquiler</a>
