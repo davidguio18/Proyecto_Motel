@@ -1,43 +1,61 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+<?php include_once ("Vistas/cabecera.php"); ?>
 
-	<h1>Registrar Habitacion</h1><br>
+<div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Ingresar </strong> Habitaciones
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="">
+                                            <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">N&uacute;mero</label>
+                                                <input type="text" id="nf-email" name= "habitaciones[numero]" placeholder="Ingrese N&uacute;mero de Hatación.." class="form-control" required onkeypress="return valida(event)" required  minlength="3" maxlength="3">
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Tipo</label>
+                                                <select  name="habitaciones[tipo]">
+                                                    <option value="">Seleccione</option>
+                                                    <option value="Premium">Premium</option>
+                                                    <option value="Basica">Basica</option>
+                                                </select>
+                                            </div>
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Valor</label>
+                                                <input type="text" id="nf-email" name="habitaciones[valor_noche]" placeholder="Ingrese Valor de Habitación.." class="form-control" required onkeypress="return valida(event)">
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Estado</label>
+                                                <select name="habitaciones[estado]" required>
+                                                     <option value="">Seleccione</option>
+                                                     <option value="Activo">Activo</option>
+                                                     <option value="Inactivo">Inactivo</option>
+                                                 </select>
+                                            </div>
+                                             <div class="card-footer">
+                                                 <button type="submit" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-dot-circle-o"></i> Registrar
+                                                </button>
+                                                <button type="reset" class="btn btn-danger btn-sm">
+                                                    <i class="fa fa-ban"></i> Limpiar
+                                                </button>
+                                    </div>
+                                         
+                                        </form>
 
-	<form action="" method="post" autocomplete="off">
-		<label>Numero:</label>
-		<input type = "text" name="habitaciones[numero]"
-		value="" onkeypress="return valida(event)" required  minlength="3" maxlength="3"/><br><br>
+ <?php 
+          if(isset($_GET["error"])){
+        echo "<h4>Habitacion ya registrada</h4>";
+         }
 
-		<label>Tipo:</label>
-		<select name="habitaciones[tipo]" required>
-			<option value="">Seleccione</option>
-			<option value="Premium">Premium</option>
-			<option value="Basica">Basica</option>
-		</select><br><br>
 
-		<label>Valor:</label>
-		<input type = "text" name="habitaciones[valor_noche]"
-		value="" onkeypress="return valida(event)" required /><br><br>
 
-		<label>Estado:</label>
-		<select name="habitaciones[estado]" required>
-			<option value="">Seleccione</option>
-			<option value="Activo">Activo</option>
-			<option value="Inactivo">Inactivo</option>
-		</select><br><br>
-
-		<button type="submit">Registrar</button>
-
-</form>
-
-		<?php 
-	if(isset($_GET["error"])){
-		echo "<h4>Habitacion ya registrada</h4>";
-	}
-	 ?>
+ ?>
 
 
 <script>
@@ -56,11 +74,20 @@ function valida(e){
 }
 
 function Validacion(e){
-	if($("#id option:selected").val() == 0){
-		alert("Debe Seleccionar una categoria");
-		return false;
-	}
+    if($("#id option:selected").val() == 0){
+        alert("Debe Seleccionar una categoria");
+        return false;
+    }
 }
 </script>
-</body>
-</html>
+                                    </div>
+                                    
+                                </div>
+                               
+                                
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+ <?php require_once("Vistas/footer.php"); ?>

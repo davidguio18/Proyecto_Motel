@@ -16,8 +16,8 @@ class habitacionesController {
 			case "update":
 				$_this->update();
 				break;
-			case "search":
-				$_this->search();
+			case "view":
+				$_this->view();
 				break;
 			case "admin":
 				$_this->admin();
@@ -41,12 +41,14 @@ class habitacionesController {
 			$num = $_POST["habitaciones"]["numero"];
 			$tip = $_POST["habitaciones"]["tipo"];
 			$val = $_POST["habitaciones"]["valor_noche"];
-			$est = $_POST["habitaciones"]["estado"];
+			$est = "Activo";
 
 			$habitacion = new habitaciones();
+			$habitacion->findBynumber($numero);
 			$guardo = $habitacion->save($num,$tip,$val,$est);
 
 			if($guardo){
+			$_SESSION["numero"] = $numero;
 				header("Location: index.php?c=habitaciones&a=admin");
 			}else{
 				header("Location: index.php?c=habitaciones&a=create&error=true");
@@ -87,9 +89,11 @@ class habitacionesController {
 		}
 	}
 
-	private function search(){
-		
-	}
+	private function view(){
+		$habitacion = new habitaciones();
+		$habitacion = $habitacion->view($_POST['hbt']);
+		require "Vistas/habitacion/admin.php";
+}
 }
 
  ?>

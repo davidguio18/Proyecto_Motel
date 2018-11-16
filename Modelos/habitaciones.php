@@ -25,10 +25,11 @@ class habitaciones extends Conexion {
 
 		try{
 		$stm->execute((array) $this);
+		return true;
 }
 	catch(Exception $e) {
     
-    require "Vistas/habitacion/create.php";
+    return false;
 }
 	}
 
@@ -37,6 +38,16 @@ class habitaciones extends Conexion {
 		$stm = $conexion->prepare("SELECT * FROM habitaciones WHERE id_habitacion= :id");
 		$stm->setFetchMode(PDO::FETCH_INTO,$this);
 		$stm->bindParam(":id",$id);
+		$stm->execute();
+		$stm->fetch();
+		}
+
+	public function findBynumber($num){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("SELECT * FROM habitaciones WHERE numero
+		= :num");
+		$stm->setFetchMode(PDO::FETCH_INTO,$this);
+		$stm->bindParam(":num",$num);
 		$stm->execute();
 		$stm->fetch();
 		}
@@ -75,6 +86,23 @@ class habitaciones extends Conexion {
 		}
 		return $habitaciones;
 	}
+
+	public function view($id){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("SELECT * FROM habitaciones WHERE numero = :id or tipo = :id or estado = :id" );
+		$stm->bindParam(":id", $id);
+		$stm->bindParam(":tipo", $id);
+		$stm->bindParam(":estado", $id);
+		$stm->setFetchMode(PDO::FETCH_CLASS,'habitaciones');
+
+		$habitacion = array();
+		$stm->execute();
+
+		while ($obj = $stm->fetch()) {
+			$habitacion[]=$obj;
+		}
+		return $habitacion;
 }
 
+}
 	?>
