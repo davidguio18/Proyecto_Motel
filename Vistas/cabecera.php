@@ -78,7 +78,7 @@
                         
                        
                         <li>
-                            <a href="map.html">
+                            <a href="index.php?c=habitaciones&a=create">
                                 <i class="fas fa-map-marker-alt"></i>Registrar Habitaci&oacute;n</a>
                         </li>
                         <li class="has-sub">
