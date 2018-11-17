@@ -30,18 +30,20 @@
                 $documento = $_POST["Login"]["documento"];
                 $contrasena = $_POST["Login"]["contrasena"];
 
-                $usuario = new Usuario();
+                $usuario = new Usuarios();
                 $usuario->findByDocument($documento);
 
-                if ($usuario->Contrasenia == $contrasena){
+                if ($usuario->contrasena == $contrasena){
                     $_SESSION["Usuario"] = $usuario;
                     $_SESSION["Perfil"] = "Administrador";
+
+      
                     header("location: index.php?c=home&a=home");
                 }else{
                     header("Location: index.php?c=home&a=login&error=true");
                 }
             }else{
-                require "Vistas/home/login.php";
+                require "login.php";
             }
 		}
 		private function logout(){

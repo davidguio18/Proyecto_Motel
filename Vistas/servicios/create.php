@@ -1,4 +1,4 @@
-<?php include_once ("Vistas/cabecera.php"); ?>
+<?php include_once ("cabecera.php"); ?>
 
 <div class="main-content">
                 <div class="section__content section__content--p30">

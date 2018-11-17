@@ -125,14 +125,15 @@
                                     <div class="account-item clearfix js-item-menu">
                                        
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#"><?=  $_SESSION["Usuario"]->nombres ?></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             
                                           
                                             <div class="account-dropdown__footer">
                                                 <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                    <i class="zmdi zmdi-power"></i><a href="index.php?c=home&a=logout">Cerrar Sesion</a>
+</a>
                                             </div>
                                         </div>
                                     </div>

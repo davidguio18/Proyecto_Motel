@@ -33,7 +33,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('loginresources/images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form"  method="post" name="formLogin">
+				<form class="login100-form validate-form"  method="post" name="formLogin" autocomplete="off">
 					<span class="login100-form-title p-b-49">
 						Login
 					</span>
@@ -46,7 +46,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate="Su Password Es Requerido" >
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="Login[password]" placeholder="Escriba Su Password">
+						<input class="input100" type="password" name="Login[contrasena]" placeholder="Escriba Su Password">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 					
@@ -66,7 +66,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<a class="login100-form-btn" href="home.php">Salir</a>
+							<a class="login100-form-btn" href="portada.php">Salir</a>
 						</div>
 					</div>
 

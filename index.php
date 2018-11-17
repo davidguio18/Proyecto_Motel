@@ -1,5 +1,6 @@
 <?php
-   
+   require_once("Modelos/Usuarios.php");
+
     session_start();
 	$action = "home";
 	$controller = "home";
