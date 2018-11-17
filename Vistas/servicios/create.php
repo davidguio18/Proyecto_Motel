@@ -42,7 +42,7 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Cantidad</label>
-                                                <input type="number" id="nf-email" name="Servicios[cantidad]" placeholder="Ingrese Alquiler.." class="form-control" required>
+                                                <input type="number" maxlength="3" id="nf-email" name="Servicios[cantidad]" placeholder="Ingrese Alquiler.." class="form-control" required>
                                             </div>
                                              <div class="card-footer">
                                                  <button type="submit" class="btn btn-primary btn-sm">
