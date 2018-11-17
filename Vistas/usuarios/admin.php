@@ -53,12 +53,16 @@
                                                     <div class="table-data-feature">
                                                         
                                                        <td> 
-                                                         <a href="index.php?c=usuarios&a=update&id=<?= $usuario->id_usuario; ?>">Editar </a>
+                                                        <button type="submit" class="btn btn-primary btn-sm">
+                                                         <i class="fa fa-dot-circle-o"><a href="index.php?c=usuarios&a=update&id=<?= $usuario->id_usuario; ?>"style="color:#f6f7f9;">Editar</i> 
+                                                </button>
                                                         </td>
 
                                                         <td>
                                                             
-                                                           <a href="index.php?c=usuarios&a=delete&id=<?= $usuario->id_usuario; ?>">Eliminar</a> 
+                                                     <button type="submit" class="btn btn-danger btn-sm">
+                                                    <i class="fa fa-ban"><a href="index.php?c=usuarios&a=delete&id=<?= $usuario->id_usuario; ?>" style="color:#f6f7f9;" ></i> Eliminar
+                                                </button>
                                                         </td>
                                                         
                                                     </div>
