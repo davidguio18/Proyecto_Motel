@@ -21,6 +21,10 @@ class productosController{
 				$_this->admin();
 				break;
 
+				case "getPrecio":
+				$_this->getPrecio();
+				break;
+
 				default:
 				throw new Exception("Accion no definida");
 				break;
@@ -100,7 +104,11 @@ private function delete(){
 
 	}
 
-
+	private function getPrecio(){
+		$pr = new Productos();
+		$pr->findByPk($_POST["id"]);
+		echo $pr->precio; 
+	}
 
 }
 
