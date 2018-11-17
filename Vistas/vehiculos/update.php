@@ -14,19 +14,19 @@
                                         <form action="" method="post"   class="">
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Placa</label>
-                                                <input type="text" id="nf-email" name="Vehiculos[placa]" value="<?= $vehiculo->placa ?>" placeholder="Ingrese la placa" class="form-control" onkeypress="return valida(event)"   minlength="3" maxlength="6">
+                                                <input type="text" id="nf-email" name="Vehiculos[placa]" value="<?= $vehiculo->placa ?>" placeholder="Ingrese la placa" class="form-control"    minlength="3" maxlength="6">
                                             </div>
                                              <div class="form-group">
-                                                <label for="nf-email" class=" form-control-label">Placa</label>
-                                                <input type="text" id="nf-email" name="Vehiculos[marca]"  value="<?= $vehiculo->marca ?>"placeholder="Ingrese la marca " class="form-control"  onkeypress="return valida(event)"  required  minlength="3" maxlength="20">
+                                                <label for="nf-email" class=" form-control-label">Marca</label>
+                                                <input type="text" id="nf-email" name="Vehiculos[marca]"  value="<?= $vehiculo->marca ?>"placeholder="Ingrese la marca " class="form-control"  required  minlength="3" maxlength="20">
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Registro</label>
                                                 <input type="date" id="nf-email" name="Vehiculos[registro]" value="<?= $vehiculo->registro ?>"placeholder="Ingrese el registro" class="form-control" required onkeypress="return valida(event)">
                                             </div>
                                             <div class="form-group">
-                                                <label for="nf-email" class=" form-control-label">Servicio</label>
-                                                <select name="Vehiculos[servicio]" value="<?= $vehiculo->servicio ?>" required>
+                                                <label value="<?= $vehiculo->servicio ?>" for="nf-email" class=" form-control-label">Servicio</label>
+                                                <select name="Vehiculos[servicio]"  required>
                                                      <option value="">Seleccione</option>
                                                      <option value="Particular" >Particular</option>
                                                      <option value="Publico" >Publico</option>
