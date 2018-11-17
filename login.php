@@ -33,10 +33,18 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('loginresources/images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+						<?php 
+							if (isset($_GET["error"])) {
+							echo "<h3> Datos Incorrectos </h3>";
+							}
+	 					?>	
 				<form class="login100-form validate-form"  method="post" name="formLogin" autocomplete="off">
 					<span class="login100-form-title p-b-49">
 						Login
 					</span>
+
+					
+				
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "El Documento es Requerido">
 						<span class="label-input100">Documento</span>
@@ -44,9 +52,9 @@
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Su Password Es Requerido" >
+					<div class="wrap-input100 validate-input" data-validate="Su Contraseña Es Requerida" >
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="Login[contrasena]" placeholder="Escriba Su Password">
+						<input class="input100" type="password" name="Login[contrasena]" placeholder="Escriba Su Contraseña">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 					
