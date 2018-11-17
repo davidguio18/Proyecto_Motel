@@ -18,7 +18,7 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Apellidos</label>
-                                                <input type="text" id="nf-email" name="Usuarios[apellidos]" placeholder="Ingrese Marca de Producto.." class="form-control" required>
+                                                <input type="text" id="nf-email" name="Usuarios[apellidos]" placeholder="Ingrese Apellidos" class="form-control" required>
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Tipo de Usuario</label>
@@ -35,7 +35,7 @@
 
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Contraseña</label>
-                                                <input type="password" id="nf-email" name="Usuarios[contrasena]" placeholder="Ingrese Marca de Producto.." class="form-control" required>
+                                                <input type="password" id="nf-email" name="Usuarios[contrasena]" placeholder="Ingrese una Contraseña" class="form-control" required>
                                             </div>
 
                                              <div class="card-footer">
