@@ -30,10 +30,10 @@
             <?php } ?>
         </select><br><br>
         <label>Valor Hora</label> <br>
-        <input type="text" name="Alquiler[valor_hora]" id="valorhora" value="<?= $alquiler->id_habitacion ?>">
+        <input type="text" name="Alquiler[valor_hora]" id="valorhora" value="<?= $alquiler->valor_hora ?>">
         <br><br>
         <label>Dia y Hora Ingreso</label><br>
-        <input type="text" name="Alquiler[ingreso]" readonly value="<?php echo date(' Y/m/d h:i:s'); ?>"><br><br>
+        <input type="text" name="Alquiler[ingreso]" readonly value="<?php $alquiler->ingreso ?>"><br><br>
         <label>Dia y Hora Salida</label><br>
         <input type="datetime" name="Alquiler[salida]" required  value="<?php echo date(' Y/m/d h:i:s'); ?>" readonly><br><br>
         <label>Vendedor</label><br>
