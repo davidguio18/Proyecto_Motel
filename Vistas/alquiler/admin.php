@@ -35,8 +35,10 @@
                 <td><?= $alquiler->salida; ?></td>
                 <td><?= $alquiler->Vendedor->nombres; ?></td>
                 <td><?= $alquiler->Vendedor->apellidos; ?></td>
-                <td> <a href="index.php?c=alquiler&a=update&id=<?= $alquiler->id_alquiler; ?>">Editar</a> </td>
-
+                <td> <a href="index.php?c=alquiler&a=update&id=<?= $alquiler->id_alquiler; ?>">
+                        <button type="button" class="btn btn-success">Editar</button>
+                    </a>
+                </td>
                 <td> <a href="javascript: eliminar(<?= $alquiler->id_alquiler; ?>)">
                         <button type="button" class="btn btn-danger">Eliminar</button>
                     </a>

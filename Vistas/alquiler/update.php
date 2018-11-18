@@ -35,7 +35,7 @@
         <label>Dia y Hora Ingreso</label><br>
         <input type="text" name="Alquiler[ingreso]" readonly value="<?php echo date(' Y/m/d h:i:s'); ?>"><br><br>
         <label>Dia y Hora Salida</label><br>
-        <input type="datetime" name="Alquiler[salida]" required  value="0000-00-00" readonly><br><br>
+        <input type="datetime" name="Alquiler[salida]" required  value="<?php echo date(' Y/m/d h:i:s'); ?>" readonly><br><br>
         <label>Vendedor</label><br>
         <select required name="Alquiler[vendedor]">
             <option value="">Selecci&oacute;n</option>
