@@ -11,7 +11,7 @@
                                         <strong>Ingresar </strong> Habitaciones
                                     </div>
                                     <div class="card-body card-block">
-                                        <form action="" method="post" class="">
+                                        <form action="" method="post" class="" autocomplete="off">
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">N&uacute;mero</label>
                                                 <input type="text" id="nf-email" name= "habitaciones[numero]" placeholder="Ingrese N&uacute;mero de Hatación.." class="form-control" required onkeypress="return valida(event)" required  minlength="3" maxlength="3">
@@ -24,19 +24,12 @@
                                                     <option value="Basica">Basica</option>
                                                 </select>
                                             </div>
-                                            </div>
+                                            
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Valor</label>
                                                 <input type="text" id="nf-email" name="habitaciones[valor_noche]" placeholder="Ingrese Valor de Habitación.." class="form-control" required onkeypress="return valida(event)">
                                             </div>
-                                             <div class="form-group">
-                                                <label for="nf-email" class=" form-control-label">Estado</label>
-                                                <select name="habitaciones[estado]" required>
-                                                     <option value="">Seleccione</option>
-                                                     <option value="Activo">Activo</option>
-                                                     <option value="Inactivo">Inactivo</option>
-                                                 </select>
-                                            </div>
+                        
                                              <div class="card-footer">
                                                  <button type="submit" class="btn btn-primary btn-sm">
                                                     <i class="fa fa-dot-circle-o"></i> Registrar

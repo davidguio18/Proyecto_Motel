@@ -1,3 +1,4 @@
+<script type="js/jquery-3.3.1.min.js"></script>
 <?php include_once ("Vistas/cabecera.php"); ?>
 
 <div class="main-content">
@@ -14,7 +15,7 @@
                                         <form action="" method="post" class="">
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Producto</label>
-                                                <select name="Servicios[producto]" required="">
+                                                <select name="Servicios[producto]" required="" id="precioProducto" onchange="getPrecioProducto()">
               
                                                    <option>seleccione</option>
                                                     <?php 
@@ -30,7 +31,7 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Precio</label>
-                                                <input type="text" id="nf-email" name="Servicios[precio]" placeholder="Ingrese Precio.." class="form-control" required=">
+                                                <input type="text" id="prec"  name="Servicios[precio]" placeholder="Ingrese Precio.." class="form-control" required=">
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Solicitud</label>
@@ -38,11 +39,11 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Alquiler</label>
-                                                <input type="number" id="nf-email" name="Servicios[alquiler]" placeholder="Ingrese Alquiler.." class="form-control" required>
+                                                <input type="text" id="nf-email" name="Servicios[alquiler]" placeholder="Ingrese Alquiler.." class="form-control" required>
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Cantidad</label>
-                                                <input type="number" id="nf-email" name="Servicios[cantidad]" placeholder="Ingrese Alquiler.." class="form-control" required>
+                                                <input type="number" id="nf-email" name="Servicios[cantidad]" placeholder="Ingrese Cantidad.." class="form-control" required>
                                             </div>
                                              <div class="card-footer">
                                                  <button type="submit" class="btn btn-primary btn-sm">
@@ -52,6 +53,22 @@
                                                     <i class="fa fa-ban"></i> Limpiar
                                                 </button>
                                     </div>
+                                     
+                                    
+                                        <script type="text/javascript">
+                                            function getPrecioProducto(){
+                                                var idProducto= $("#precioProducto").val();
+                                                $.ajax({
+                                                    method: "POST",
+                                                    url:"index.php?c=producto&a=getPrecio",
+                                                    data: {id:idProducto}
+                                                }).done(function(msg){
+                                                    $("#prec").val(msg);
+                                                   // alert("pppppppppp");
+                                                });
+
+                                            }
+                                        </script>
                                          
                                         </form>
                                     </div>
