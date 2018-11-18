@@ -1,6 +1,9 @@
 <?php
 
-require_once ("Modelos/Alquiler.php");
+    require_once ("Modelos/Alquiler.php");
+    require_once ("Modelos/habitaciones.php");
+    require_once ("Modelos/Usuarios.php");
+    require_once ("Modelos/Vehiculos.php");
 
     class alquilerController{
 
@@ -30,69 +33,73 @@ require_once ("Modelos/Alquiler.php");
         private function create(){
             if(isset($_POST["Alquiler"])){
                 //GUARDAR EN BD
-                $nom = $_POST["Alquiler"]["nombres"];
-                $ape = $_POST["Alquiler"]["apellidos"];
-                $doc = $_POST["Alquiler"]["documento"];
-                $con = $_POST["Alquiler"]["contrasenia"];
+                $hab = $_POST["Alquiler"]["habitacion"];
+                $cli = $_POST["Alquiler"]["cliente"];
+                $vh = $_POST["Alquiler"]["valor_hora"];
+                $ing = $_POST["Alquiler"]["ingreso"];
+                $sal = null;// = $_POST["Alquiler"]["salida"];
+                $ven = $_POST["Alquiler"]["vendedor"];
 
-                $usuario = new Usuario();
-                $guardo = $usuario->save($nom, $ape,$doc, $con, $est);
+                $alquiler = new Alquiler();
+                $guardo = $alquiler->save($hab, $cli, $vh, $ing, $sal, $ven);
 
                 if ($guardo) {
-                    header("Location: index.php?c=usuarios&a=admin");
+                    header("Location: index.php?c=alquiler&a=admin");
                 }else{
                     echo "Ocurrio un error al guardar";
                 }
             }else {
-                require "Vistas/usuarios/create.php";
+                // carga el numero de las habitaciones Disponibles
+                $hab = new habitaciones();
+                $numHab = $hab->listar();
+
+                //cargar la placa de los usuarios
+                $vehiculos = new Vehiculos();
+                $placaVehiculo = $vehiculos->listar();
+
+                // carga el nombre y apellidos del vendedor
+                $usuario = new Usuarios();
+                $vendedores = $usuario->vew();
+
+                // carga la vista de crear alquiler
+                require "Vistas/alquiler/create.php";
             }
         }
 
-
         private function admin(){
-
-            $prod = new Productos();
-            $productos = $prod->listar();
-
-            require"Vistas/productos/admin.php";
+            $alq = new Alquiler();
+            $alquileres = $alq->listar();
+            require "Vistas/alquiler/admin.php";
         }
 
 
         private function update(){
-            $producto = new Productos();
-            $producto->findByPk($_GET["id"]);
+            $alquiler = new Alquiler();
+            $alquiler->findByPk($_GET["id"]);
 
-            if(isset($_POST["Productos"])){
-                $producto->nombre = $_POST["Productos"]["nombre"];
-                $producto->marca = $_POST["Productos"]["marca"];
-                $producto->cantidad = $_POST["Productos"]["cantidad"];
-                $producto->precio = $_POST["Productos"]["precio"];
-                $producto->estado = $_POST["Productos"]["estado"];
+            if(isset($_POST["Alquiler"])){
+                $alquiler->habitacion = $_POST["Productos"]["nombre"];
+                $alquiler->cliente = $_POST["Productos"]["marca"];
+                $alquiler->valor_hora = $_POST["Productos"]["cantidad"];
+                $alquiler->ingreso = $_POST["Productos"]["precio"];
+                $alquiler->salida = $_POST["Productos"]["estado"];
+                $alquiler->vendedor = $_POST["Productos"]["estado"];
 
-
-                $producto->update();
-                header("Location: index.php?c=producto&a=admin");
+                $alquiler->update();
+                header("Location: index.php?c=alquiler&a=admin");
             }else{
-                require "Vistas/productos/update.php";
+                require "Vistas/alquiler/update.php";
             }
         }
-
 
         private function delete(){
-
-            $producto = new Productos();
-            $producto->delete($_GET["id"]);
-
+            $alquiler = new Alquiler();
+            $alquiler->delete($_GET["id"]);
             if(isset($_GET["id"])){
-                $producto->delete($_GET["id"]);
-
-                header("Location: index.php?c=producto&a=admin");
-
+                $alquiler->delete($_GET["id"]);
+                header("Location: index.php?c=alquiler&a=admin");
             }else{
-                header("Location: index.php?c=producto&a=admin");
+                header("Location: index.php?c=alquiler&a=admin");
             }
-
         }
-
-
     }
