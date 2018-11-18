@@ -28,7 +28,6 @@
     <link href="Vistas/resources/vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-
     <!-- Main CSS-->
     <link href="Vistas/resources/css/theme.css" rel="stylesheet" media="all">
 
@@ -36,9 +35,6 @@
 
 <body class="animsition">
     <div class="page-wrapper">
-       
-       
-
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
@@ -78,7 +74,7 @@
                         
                        
                         <li>
-                            <a href="index.php?c=habitaciones&a=create">
+                            <a href="map.html">
                                 <i class="fas fa-map-marker-alt"></i>Registrar Habitaci&oacute;n</a>
                         </li>
                         <li class="has-sub">

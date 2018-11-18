@@ -1,47 +1,62 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <title>Crear Alquiler</title>
-</head>
-<body>
-    <h1>Registrar Alquiler</h1>
-    <form method="post">
-        <label>Numero Habitaci&oacute;n</label><br>
-        <select required name="Alquiler[habitacion]" id="alquiler_habitacion" onchange="getValor()">
-            <option value="">Selecci&oacute;n</option>
-            <?php foreach ($numHab as $numHabitacion) { ?>
-                    <option value="<?= $numHabitacion->id_habitacion ?>"><?= $numHabitacion->numero ?></option>
-            <?php } ?>
-        </select><br><br>
-        <label>Placas Vehiculo</label><br>
-        <select required name="Alquiler[cliente]">
-            <option value="">Selecci&oacute;n</option>
-            <?php foreach ($placaVehiculo as $placa) { ?>
-                <option value="<?= $placa->id_cliente ?>"><?= $placa->placa ?></option>
-            <?php } ?>
-        </select><br><br>
-        <label>Valor Hora</label> <br>
-        <input type="text" name="Alquiler[valor_hora]" id="valorhora">
-        <br><br>
-        <label>Dia y Hora Ingreso</label><br>
-        <input type="text" name="Alquiler[ingreso]" readonly value="<?php echo date(' Y/m/d h:i:s'); ?>"><br><br>
-        <label>Dia y Hora Salida</label><br>
-        <input type="datetime" name="Alquiler[salida]" required  value="0000-00-00" readonly><br><br>
-        <label>Vendedor</label><br>
-        <select required name="Alquiler[vendedor]">
-            <option value="">Selecci&oacute;n</option>
-            <?php foreach ($vendedores as $vendedor) { ?>
-                <option value="<?= $vendedor->id_usuario ?>"><?= $vendedor->nombres .'  '. $vendedor->apellidos ?></option>
-            <?php } ?>
-        </select><br><br>
-        <button type="submit">Registrar</button>
-    </form>
-</body>
+<?php include_once ("Vistas/cabecera.php"); ?>
+
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="card">
+                                <div class="card-header">
+                                    <strong>Ingresar </strong> Alquiler
+                                </div>
+                                    <div class="card-body card-block">
+                                        <form method="post">
+                                            <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">N&uacute;mero Habitaci&oacute;n</label>
+                                                <select required name="Alquiler[habitacion]" id="alquiler_habitacion" onchange="getValor()" class="form-control" >
+                                                    <option value="">Selecci&oacute;n</option>
+                                                    <?php foreach ($numHab as $numHabitacion) { ?>
+                                                        <option value="<?= $numHabitacion->id_habitacion ?>"><?= $numHabitacion->numero ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Placas Vehiculo</label>
+                                                <select required name="Alquiler[cliente]" class="form-control">
+                                                    <option value="">Selecci&oacute;n</option>
+                                                    <?php foreach ($placaVehiculo as $placa) { ?>
+                                                        <option value="<?= $placa->id_cliente ?>"><?= $placa->placa ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Valor Hora</label><br>
+                                                <input type="text" id="valorhora" name= "Alquiler[valor_hora]" />
+                                            </div>
+                                            <label>Dia y Hora Ingreso</label><br>
+                                            <input type="text" name="Alquiler[ingreso]" readonly value="<?php echo date(' Y/m/d h:i:s'); ?>"><br><br>
+                                            <label>Dia y Hora Salida</label><br>
+                                            <input type="datetime" name="Alquiler[salida]" required  value="0000-00-00" readonly><br><br>
+                                            <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Vendedor</label>
+                                                <select required name="Alquiler[vendedor]" class="form-control">
+                                                    <option value="">Selecci&oacute;n</option>
+                                                    <?php foreach ($vendedores as $vendedor) { ?>
+                                                        <option value="<?= $vendedor->id_usuario ?>"><?= $vendedor->nombres .'  '. $vendedor->apellidos ?></option>
+                                                    <?php } ?>
+                                                </select><br><br>
+                                            </div>
+                                            <div class="card-footer">
+                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-dot-circle-o"></i> Registrar
+                                                </button>
+                                                <button type="reset" class="btn btn-danger btn-sm">
+                                                    <i class="fa fa-ban"></i> Limpiar
+                                                </button>
+                                            </div>
+                                        </form>
+
     <script type="text/javascript">
         function getValor() {
             var idHabitacion = $("#alquiler_habitacion").val();
@@ -55,4 +70,5 @@
             });
         }
     </script>
-</html>
+
+<?php require_once("Vistas/footer.php"); ?>
