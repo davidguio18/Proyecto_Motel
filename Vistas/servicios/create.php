@@ -15,7 +15,7 @@
                                         <form action="" method="post" class="" >
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Producto</label>
-                                                <select name="Servicios[producto]" required="" id="precioProducto" onchange="getPrecioProducto()">
+                                                <select name="Servicios[producto]" required="" id="precioProducto" onchange="getPrecioProducto()" class="form-control">
               
                                                    <option>Selecciona</option>
                                                     <?php 
