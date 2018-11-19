@@ -1,3 +1,6 @@
+
+<?php include_once ("cabecera.php"); ?>
+
 <script type="js/jquery-3.3.1.min.js"></script>
 <?php include_once ("Vistas/cabecera.php"); ?>
 

@@ -27,6 +27,7 @@
 </body>
 </html>
 <?php include_once ("Proyecto_Motel/Vistas/cabecera.php"); ?>
+
 <?php include_once ("Vistas/cabecera.php"); ?>
 
 <div class="main-content">
@@ -78,6 +79,8 @@
                             </div>
                         </div>
 
+
  <?php require_once("Proyecto_Motel/Vistas/footer.php"); ?>
+
 
  <?php require_once("Vistas/footer.php"); ?>
