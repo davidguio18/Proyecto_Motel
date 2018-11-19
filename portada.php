@@ -55,7 +55,7 @@
                 <!-- Signup btn -->
                 <div class="col-12 col-lg-2">
                     <div class="sing-up-button d-none d-lg-block">
-                        <a href="login.php">Login</a>
+                        <a href="index.php?c=home&a=login">Login</a>
                     </div>
                 </div>
             </div>
@@ -341,19 +341,19 @@
     <!-- ***** Footer Area Start ***** -->
 
     <!-- Jquery-2.2.4 JS -->
-    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="homeresource/js/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
+    <script src="homeresource/js/popper.min.js"></script>
     <!-- Bootstrap-4 Beta JS -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="homeresource/js/bootstrap.min.js"></script>
     <!-- All Plugins JS -->
-    <script src="js/plugins.js"></script>
+    <script src="homeresource/js/plugins.js"></script>
     <!-- Slick Slider Js-->
-    <script src="js/slick.min.js"></script>
+    <script src="homeresource/js/slick.min.js"></script>
     <!-- Footer Reveal JS -->
-    <script src="js/footer-reveal.min.js"></script>
+    <script src="homeresource/js/footer-reveal.min.js"></script>
     <!-- Active JS -->
-    <script src="js/active.js"></script>
+    <script src="homeresource/js/active.js"></script>
 </body>
 
 </html>
