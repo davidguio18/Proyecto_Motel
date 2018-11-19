@@ -32,7 +32,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Valor Hora</label><br>
-                                                <input type="text" id="valorhora" name= "Alquiler[valor_hora]" />
+                                                <input type="text" id="valorhora" name= "Alquiler[valor_hora]" readonly="" class="form-control"/>
                                             </div>
                                             <label>Dia y Hora Ingreso</label><br>
                                             <input type="text" name="Alquiler[ingreso]" readonly value="<?php echo date(' Y/m/d h:i:s'); ?>"><br><br>
@@ -45,7 +45,7 @@
                                                     <?php foreach ($vendedores as $vendedor) { ?>
                                                         <option value="<?= $vendedor->id_usuario ?>"><?= $vendedor->nombres .'  '. $vendedor->apellidos ?></option>
                                                     <?php } ?>
-                                                </select><br><br>
+                                                </select>
                                             </div>
                                             <div class="card-footer">
                                                 <button type="submit" class="btn btn-primary btn-sm">
