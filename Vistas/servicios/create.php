@@ -6,7 +6,6 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-12">
-                                
                                 <div class="card">
                                     <div class="card-header">
                                         <strong>Registrar </strong> Servicio
@@ -16,14 +15,15 @@
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Producto</label>
                                                 <select name="Servicios[producto]" required="" id="precioProducto" onchange="getPrecioProducto()" class="form-control">
-              
                                                    <option>Selecciona</option>
+                                                <label for="nf-email" class="form-control-label">Producto</label>
+                                                <select name="Servicios[producto]" class="form-control" required="" id="precioProducto" onchange="getPrecioProducto()">
+                                                   <option>Selecci&oacute;n</option>
                                                     <?php 
                                                         require_once("Modelos/Productos.php");
                                                         $prod = new Productos();
                                                         $productos = $prod->listar();
                                                      ?>
-
                                                     <?php foreach ( $productos as $producto) {?>
                                                     <option value="<?=$producto->id_producto; ?>"><?=$producto->nombre; ?></option>
                                                     <?php } ?>
@@ -43,11 +43,13 @@
                                                 <input readonly="" type="text" id="nf-email" name="Servicios[solicitud]" value="<?php echo date ('  Y/m/d  h:i:s');?>" placeholder="Ingrese Solicitud.." class="form-control" required>
                                             </div>
                                             <div class="form-group">
-                                                <label for="nf-email" class=" form-control-label">Alquiler</label>
-
-                                                 
-
-                                                
+                                                <label for="nf-email" class="form-control-label">Alquiler</label>
+                                                <select required name="Servicios[alquiler]" class="form-control" >
+                                                    <option value="">Selecci&oacute;n</option>
+                                                    <?php foreach ($codAlq as $codigoAlquiler) { ?>
+                                                        <option value="<?= $codigoAlquiler->id_alquiler ?>"><?= $codigoAlquiler->id_alquiler ?></option>
+                                                    <?php } ?>
+                                                </select>
                                             </div>
                                              
                                              <div class="card-footer">

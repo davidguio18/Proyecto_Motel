@@ -1,9 +1,6 @@
 <?php
 
     require_once ("Modelos/Alquiler.php");
-    require_once ("Modelos/habitaciones.php");
-    require_once ("Modelos/Usuarios.php");
-    require_once ("Modelos/Vehiculos.php");
 
     class alquilerController{
 
