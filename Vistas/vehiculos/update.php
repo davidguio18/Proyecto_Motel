@@ -3,12 +3,11 @@
 <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                
+                        <div class="row" style="margin-left: 60px;">
+                            <div class="col-lg-11">
                                 <div class="card">
                                     <div class="card-header">
-                                        <strong>Actualizar <?= $vehiculo->placa?>
+                                        Actualizar -> <strong> <?= $vehiculo->placa?> </strong>
                                     </div>
                                     <div class="card-body card-block">
                                         <form action="" method="post"   class="">
@@ -26,35 +25,28 @@
                                             </div>
                                             <div class="form-group">
                                                 <label value="<?= $vehiculo->servicio ?>" for="nf-email" class=" form-control-label">Servicio</label>
-                                                <select name="Vehiculos[servicio]"  required>
+                                                <select name="Vehiculos[servicio]" class="form-control" required>
                                                      <option value="">Seleccione</option>
                                                      <option value="Particular" >Particular</option>
                                                      <option value="Publico" >Publico</option>
                                                  </select>
                                             </div>
-                                            </div>
-                                            
-                                              
-                                             <div class="card-footer">
+                                            <div class="card-footer">
                                                  <button type="submit" class="btn btn-primary btn-sm">
                                                     <i class="fa fa-dot-circle-o"></i> Actualizar
                                                 </button>
                                                 <button type="reset" class="btn btn-danger btn-sm">
                                                     <i class="fa fa-ban"></i> Limpiar
                                                 </button>
-                                    </div>
-                                         
+                                            </div>
                                         </form>
+                                    </div>
 
  <?php 
           if(isset($_GET["error"])){
         echo "<h4>vehiculo ya registrado</h4>";
          }
-
-
-
  ?>
-
 
 <script>
 function valida(e){

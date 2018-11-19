@@ -3,9 +3,8 @@
 <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                
+                        <div class="row" style="margin-left: 60px;">
+                            <div class="col-lg-11">
                                 <div class="card">
                                     <div class="card-header">
                                         <strong>Ingresar </strong> Habitaciones
@@ -13,12 +12,12 @@
                                     <div class="card-body card-block">
                                         <form action="" method="post" class="" autocomplete="off">
                                             <div class="form-group">
-                                                <label for="nf-email" class=" form-control-label">N&uacute;mero</label>
-                                                <input type="text" id="nf-email" name= "habitaciones[numero]" placeholder="Ingrese N&uacute;mero de Hatación.." class="form-control" required onkeypress="return valida(event)" required  minlength="3" maxlength="3">
+                                                <label for="nf-email" class=" form-control-label">N&uacute;mero Habitaci&oacute;n</label>
+                                                <input type="text" id="nf-email" name= "habitaciones[numero]" placeholder="Ingrese N&uacute;mero de Habitaci&oacute;n.." class="form-control" required onkeypress="return valida(event)" required  minlength="3" maxlength="3">
                                             </div>
                                              <div class="form-group">
-                                                <label for="nf-email" class=" form-control-label">Tipo</label>
-                                                <select  name="habitaciones[tipo]">
+                                                <label for="nf-email" class=" form-control-label" >Tipo</label>
+                                                <select  name="habitaciones[tipo]" required class="form-control">
                                                     <option value="">Seleccione</option>
                                                     <option value="Premium">Premium</option>
                                                     <option value="Basica">Basica</option>

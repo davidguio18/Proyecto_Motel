@@ -4,8 +4,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-6">
-                                
+                            <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-header">
                                         <strong>Ingresar </strong> Usuario
@@ -22,7 +21,7 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Tipo de Usuario</label>
-                                                <select name="Usuarios[perfil];" required>
+                                                <select name="Usuarios[perfil];"  class="form-control" required>
                                                     <option value="">Selecci&oacute;n</option>
                                                     <option value="Administrador">Administrador</option>
                                                     <option value="Vendedor">Vendedor</option>
@@ -32,12 +31,10 @@
                                                 <label for="nf-email" class=" form-control-label">Documento</label>
                                                 <input type="number" id="nf-email" placeholder="Ingrese Numero de Documento.." class="form-control" required name="Usuarios[documento]" onkeypress="return valida(event)">
                                             </div>
-
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Contraseña</label>
                                                 <input type="password" id="nf-email" name="Usuarios[contrasena]" placeholder="Ingrese una Contraseña" class="form-control" required>
                                             </div>
-
                                              <div class="card-footer">
                                                  <button type="submit" class="btn btn-primary btn-sm">
                                                     <i class="fa fa-dot-circle-o"></i> Registrar
