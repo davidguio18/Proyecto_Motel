@@ -22,6 +22,9 @@ class habitacionesController {
 			case "admin":
 				$_this->admin();
 				break;
+            case "getValor":
+                $_this->getvalor();
+                break;
 			default:
 				throw new Exception("Accion no definida");		
 				break;
@@ -89,11 +92,24 @@ class habitacionesController {
 		}
 	}
 
-	private function view(){
-		$habitacion = new habitaciones();
-		$habitacion = $habitacion->view($_POST['hbt']);
-		require "Vistas/habitacion/admin.php";
-}
+	private function view()
+    {
+        $habitacion = new habitaciones();
+        $habitacion = $habitacion->view($_POST['hbt']);
+        require "Vistas/habitacion/admin.php";
+    }
+
+	private function search(){
+		
+	}
+
+    private function getValor(){
+        $vh = new habitaciones();
+        $vh->findByPk($_POST["id"]);
+        echo $vh->valor_noche;
+        //return $valor_hora;
+    }
+
 }
 
  ?>

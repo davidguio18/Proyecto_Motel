@@ -30,7 +30,7 @@
 
             case "alquiler":
                 require "Controladores/alquilerController.php";
-                productosController::main($action);
+                alquilerController::main($action);
                 break;
 			case "habitaciones":
 				require "Controladores/habitacionesController.php";
