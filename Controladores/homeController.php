@@ -45,7 +45,7 @@
                     header("Location: index.php?c=home&a=login&error=true");
                 }
             }else{
-                require "login.php";
+                require "Vistas/login.php";
             }
 		}
 		private function logout(){
