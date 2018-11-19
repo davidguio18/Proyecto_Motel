@@ -26,6 +26,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="loginresources/css/util.css">
 	<link rel="stylesheet" type="text/css" href="loginresources/css/main.css">
+
+
 <!--===============================================================================================-->
 </head>
 <body>
@@ -35,7 +37,9 @@
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 						<?php 
 							if (isset($_GET["error"])) {
-							echo "<h3> Datos Incorrectos </h3>";
+
+
+							echo "<h4> Por Favor Revise Sus Datos </h4>";
 							}
 	 					?>	
 				<form class="login100-form validate-form"  method="post" name="formLogin" autocomplete="off">

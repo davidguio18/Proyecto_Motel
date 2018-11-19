@@ -128,8 +128,8 @@
                                           
                                             <div class="account-dropdown__footer">
                                                 <a href="index.php?c=home&a=logout">
-                                                    <i class="zmdi zmdi-power"></i>
-</a>
+                                                    <i class="zmdi zmdi-power"> Cerrar Sesion</i>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
