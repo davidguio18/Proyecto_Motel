@@ -50,24 +50,24 @@
                         <li class="active has-sub">
                             
                             <a class="js-arrow" href="index.php?c=home&a=home">
-                                <i class="index.php?c=home&a=home"></i>Principal</a>
+                                <i class="fa fa-home"></i>Principal</a>
                             
                         </li>
                           <li>
                             <a href="index.php?c=vehiculos&a=create">
-                                <i class="fas fa-calendar-alt"></i>Registrar Vehículo</a>
+                                <i  class="fa fa-car"></i>Registrar Vehículo</a>
                         </li>
                          <li>
                             <a href="index.php?c=alquiler&a=create">
-                                <i class="fas fa-calendar-alt"></i>Registrar Alquiler</a>
+                                <i  class="fa fa-calculator"></i>Registrar Alquiler</a>
                         </li>
                         <li>
                             <a href="index.php?c=servicios&a=create">
-                                <i class="far fa-check-square"></i>Registrar Servicio</a>
+                                <i class="fa fa-clock-o"></i>Registrar Servicio</a>
                         </li>
                         <li>
                             <a href=index.php?c=producto&a=create>
-                                <i class="fas fa-chart-bar"></i>Registrar Producto</a>
+                                <i class="fa fa-truck" ></i>Registrar Producto</a>
                         </li>
                           <li>
                             <a href="index.php?c=usuarios&a=create">
@@ -78,7 +78,7 @@
                        
                         <li>
                             <a href="index.php?c=habitaciones&a=create"">
-                                <i class="fas fa-map-marker-alt"></i>Registrar Habitaci&oacute;n</a>
+                                <i class="fa fa-hospital-o"></i>Registrar Habitaci&oacute;n</a>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
