@@ -38,6 +38,24 @@
                                                     <td> <a href="index.php?c=vehiculos&a=delete&id=<?= $vehiculo->id_cliente; ?>">Eliminar</a> </td>
                                                 </tr>
                                             <?php } ?>
+                                            <tr class="tr-shadow">
+                                               <tr>
+			                               		<th><?= $vehiculo->id_cliente; ?></th>
+				                                <td><?= $vehiculo->placa; ?></td>
+				                                <td><?= $vehiculo->marca; ?></td>
+				                                <td><?= $vehiculo->servicio; ?></td>
+				                                <td><?= $vehiculo->registro; ?></td>
+				                                
+				                                <td> <button type="submit" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-dot-circle-o"><a href="index.php?c=vehiculos&a=update&id=<?= $vehiculo->id_cliente; ?>" style="color:#f6f7f9;" >Editar</i> 
+                                                </button> </td>
+				                                <td> <button type="submit" class="btn btn-danger btn-sm">
+                                                    <i class="fa fa-ban"><a href="index.php?c=vehiculos&a=delete&id=<?= $vehiculo->id_cliente; ?>" style="color:#f6f7f9;" ></i> Eliminar
+                                                </button>  </td>
+				
+			                                     </tr>
+                                            </tr>
+                                            		<?php } ?>
                                             <tr class="spacer"></tr>
                                         </tbody>
                                     </table>

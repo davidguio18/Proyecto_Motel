@@ -5,6 +5,8 @@
                     <div class="container-fluid">
                         <div class="row" style="margin-left: 60px;">
                             <div class="col-lg-11">
+                            <div class="col-lg-12">
+                                
                                 <div class="card">
                                     <div class="card-header">
                                         <strong>Registrar </strong> Vehiculo
@@ -22,6 +24,7 @@
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Servicio</label>
                                                 <select name="Vehiculos[servicio]" required class="form-control">
+                                                <select  class="form-control" name="Vehiculos[servicio]" required>
                                                      <option value="">Seleccione</option>
                                                      <option value="Particular" >Particular</option>
                                                      <option value="Publico" >Publico</option>

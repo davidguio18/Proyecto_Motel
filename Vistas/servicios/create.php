@@ -1,3 +1,6 @@
+
+<?php include_once ("cabecera.php"); ?>
+
 <script type="js/jquery-3.3.1.min.js"></script>
 <?php include_once ("Vistas/cabecera.php"); ?>
 
@@ -47,6 +50,16 @@
                                                         <option value="<?= $codigoAlquiler->id_alquiler ?>"> <?= $codigoAlquiler->id_alquiler ?></option>
                                                     <?php } ?>
                                                 </select>
+                                                <label for="nf-email" class=" form-control-label">Alquiler</label>
+                                                <input type="number" id="nf-email" name="Servicios[alquiler]" placeholder="Ingrese Alquiler.." class="form-control" required>
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Cantidad</label>
+                                                <input type="number" maxlength="3" id="nf-email" name="Servicios[cantidad]" placeholder="Ingrese Alquiler.." class="form-control" required>
+
+                                                 
+
+                                                
                                             </div>
                                              
                                              <div class="card-footer">
