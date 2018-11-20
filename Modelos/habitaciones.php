@@ -69,8 +69,8 @@ class habitaciones extends Conexion {
 		$conexion = $this->getConexion();
 		$stm = $conexion->prepare("UPDATE habitaciones SET 
 		 estado = :estado WHERE id_habitacion = :id");
-	
-		
+
+
 		$stm->bindParam(":estado",$this->estado);
 		$stm->bindParam(":id",$this->id_habitacion);
 
@@ -111,7 +111,7 @@ class habitaciones extends Conexion {
 		}
 		return $habitaciones;
 	}
-	
+
 
 	public function view($id){
 		$conexion = $this->getConexion();

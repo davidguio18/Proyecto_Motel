@@ -97,7 +97,7 @@ class habitacionesController {
 
 		if(isset($_POST["habitaciones"])){
 			$habitacion->estado = $_POST["habitaciones"]["estado"];
-	
+
 			$habitacion->update2();
 			header("Location: index.php?c=habitaciones&a=admin2");
 		}else{

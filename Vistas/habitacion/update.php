@@ -25,7 +25,7 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class="form-control-label">Valor</label>
-                                                <input type="text" id="nf-email" name="habitaciones[valor_noche]" placeholder="Valor Habitación.." maxlength="10" class="form-control" required onkeypress="return valida(event)"  value="<?= $habitacion->valor_noche?>">
+                                                <input type="text" id="nf-email" name="habitaciones[valor_noche]" placeholder="Valor Habitación.." class="form-control" required onkeypress="return valida(event)" value="<?= $habitacion->valor_noche?>">
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Estado</label>
