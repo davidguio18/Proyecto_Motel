@@ -1,6 +1,7 @@
 <?php 
 
 	require_once("Modelos/Usuarios.php");
+
 	class homecontroller{
 
 		public static function main($action){
@@ -23,8 +24,10 @@
 				
 			}
 		}
+
+
 		private function home(){
-			require "Vistas/home/home.php";
+			header("location: index.php?c=habitaciones&a=admin2");
 		}
 		private function login(){
 			if (isset($_POST["Login"]) && $_POST["Login"]["documento"] != "" && $_POST["Login"]["contrasena"] != ""){

@@ -49,10 +49,9 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Principal</a>
-                            
-                            <a class="js-arrow" href="index.php?c=home&a=home">
-                                <i class="fa fa-home"></i>Principal</a>
+                                <i class="icon icon-home"></i>Principal</a>
+                            <a class="js-arrow" href="index.php?c=habitaciones&a=admin2">
+                                <i class="index.php?c=home&a=home"></i>Principal</a>
                             
                         </li>
                           <li>
