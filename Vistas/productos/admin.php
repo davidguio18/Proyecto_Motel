@@ -35,26 +35,26 @@
                                              
                                             </tr>
                                         </thead>
-                                        <!--<?php foreach ( $productos as $producto) {?>-->
+                                        <?php foreach ( $productos as $producto) {?>
                                         <tbody>
                                             <tr class="tr-shadow">
                                                 <td>
-                                               <!--  <?=$producto->id_producto; ?> -->
+                                                <?=$producto->id_producto; ?> 
                                                 </td>
-                                                <td><!--<?=$producto->nombre; ?>--></td>
+                                                <td><?=$producto->nombre; ?></td>
                                                 <td>
-                                                    <span class="block-email"> <!--<?=$producto->marca; ?>--></span>
+                                                    <span class="block-email"> <?=$producto->marca; ?></span>
                                                 </td>
-                                                <td class="desc"><!--<?=$producto->cantidad; ?>--></td>
-                                                <td><!--<?=$producto->precio; ?>--></td>
+                                                <td class="desc"><?=$producto->cantidad; ?></td>
+                                                <td><?=$producto->precio; ?></td>
                                                 <td>
-                                                    <span class="status--process"><!--<?=$producto->estado; ?>--></span>
+                                                    <span class="status--process"><?=$producto->estado; ?></span>
                                                 </td>
                                                 
                                                 <td>
                                                     <div class="table-data-feature">
                                                         
-                                                         <a href="index.php?c=producto&a=update&id=<?=$producto->id_producto;?>"></a>
+                                                         <a href="index.php?c=producto&a=update&id=<?=$producto->id_producto;?>">Editar</a>
                                                           
                                                 </td>
                                                 <td>
@@ -64,7 +64,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            		<!--<?php } ?>-->
+                                            		<?php } ?>
                                             <tr class="spacer"></tr>
                                             
                                         </tbody>
