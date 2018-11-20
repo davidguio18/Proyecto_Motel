@@ -2,7 +2,7 @@
 <?php include_once ("Vistas/cabecera.php"); ?>
 
 <?php include_once ("Vistas/cabecera.php"); ?>
-
+<?php include_once ("Proyecto_Motel/Vistas/cabecera.php"); ?>
 <?php include_once ("Vistas/cabecera.php"); ?>
 
 <div class="main-content">
