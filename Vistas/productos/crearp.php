@@ -2,6 +2,8 @@
 
 <?php include_once ("Vistas/cabecera.php"); ?>
 
+<?php include_once ("Vistas/cabecera.php"); ?>
+
 <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
@@ -16,15 +18,15 @@
                                         <form action="" method="post" class="">
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Nombre</label>
-                                                <input type="text" id="nf-email" name= "Productos[nombre]" placeholder="Ingrese Nombre de Producto.." class="form-control" required>
+                                                <input type="text" id="nf-email" name= "Productos[nombre]" placeholder="Ingrese Nombre de Producto.." class="form-control" maxlength="15" required>
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Marca</label>
-                                                <input type="text" id="nf-email" name="Productos[marca]" placeholder="Ingrese Marca de Producto.." class="form-control" required=">
+                                                <input type="text" id="nf-email" name="Productos[marca]" placeholder="Ingrese Marca de Producto.." class="form-control" maxlength="15" required=">
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Cantidad</label>
-                                                <input type="text" id="nf-email" name="Productos[cantidad]" placeholder="Ingrese Cantidad de Producto.." class="form-control" required>
+                                                <input type="text" maxlength="15" id="nf-email" name="Productos[cantidad]" placeholder="Ingrese Cantidad de Producto.." class="form-control" required>
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Precio</label>
@@ -50,5 +52,10 @@
 
                             </div>
                         </div>
+
+ <?php require_once("Vistas/footer.php"); ?>
+
+ <?php require_once("Proyecto_Motel/Vistas/footer.php"); ?>
+
 
  <?php require_once("Vistas/footer.php"); ?>

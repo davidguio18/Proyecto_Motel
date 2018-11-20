@@ -4,7 +4,6 @@ class productosController{
 	public static function main($action){
         $_this= new productosController();
 		switch ($action) {
-
 				case "create":
 				$_this->create();
 				break;
@@ -28,9 +27,6 @@ class productosController{
 				default:
 				throw new Exception("Accion no definida");
 				break;
-				
-				
-				
 			}
 	}
 
