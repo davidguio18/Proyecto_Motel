@@ -28,14 +28,13 @@
                                     <table class="table table-data2">
                                         <thead>
                                             <tr>
-                                   
                                                 <th>Id</th>
                                                 <th>N&uacute;mero</th>
                                                 <th>Tipo</th>
                                                 <th>Valor Noche</th>
                                                 <th>Estado</th>
                                                 <th></th>
-                                         </tr>
+                                            </tr>
                                         </thead>
                                         <?php foreach($habitacion as $habitacion) { ?>
                                         <tbody>
@@ -64,7 +63,7 @@
                                                     <i class="fa fa-ban"><a href="index.php?c=habitaciones&a=delete&id=<?= $habitacion->id_habitacion; ?>" style="color:#f6f7f9;" ></i> Eliminar
                                                 </button>
                                                            
-                                                        </button>
+                                                </td>
                                                     </div>
                                                 </td>
                                             </tr>

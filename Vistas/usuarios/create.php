@@ -4,7 +4,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 
                                 <div class="card">
                                     <div class="card-header">
@@ -19,6 +19,7 @@
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Apellidos</label>
                                                 <input type="text" maxlength="30" id="nf-email" name="Usuarios[apellidos]" placeholder="Ingrese Marca de Producto.." class="form-control" required>
+                                                <input type="text" id="nf-email" name="Usuarios[apellidos]" placeholder="Ingrese Apellidos" class="form-control" required>
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Tipo de Usuario</label>
@@ -35,7 +36,7 @@
 
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Contraseña</label>
-                                                <input type="password" id="nf-email" name="Usuarios[contrasena]" placeholder="Ingrese Marca de Producto.." class="form-control" required>
+                                                <input type="password" id="nf-email" name="Usuarios[contrasena]" placeholder="Ingrese una Contraseña" class="form-control" required>
                                             </div>
 
                                              <div class="card-footer">

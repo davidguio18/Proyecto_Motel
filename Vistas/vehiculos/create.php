@@ -4,7 +4,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 
                                 <div class="card">
                                     <div class="card-header">
@@ -24,7 +24,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Servicio</label>
-                                                <select name="Vehiculos[servicio]" required>
+                                                <select  class="form-control" name="Vehiculos[servicio]" required>
                                                      <option value="">Seleccione</option>
                                                      <option value="Particular" >Particular</option>
                                                      <option value="Publico" >Publico</option>
