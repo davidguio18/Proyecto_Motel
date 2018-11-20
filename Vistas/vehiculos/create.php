@@ -24,7 +24,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Servicio</label>
-                                                <select name="Vehiculos[servicio]" required>
+                                                <select  class="form-control" name="Vehiculos[servicio]" required>
                                                      <option value="">Seleccione</option>
                                                      <option value="Particular" >Particular</option>
                                                      <option value="Publico" >Publico</option>
