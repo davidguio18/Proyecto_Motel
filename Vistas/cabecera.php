@@ -10,11 +10,12 @@
 
     <!-- Title Page-->
     <title>principal</title>
+    
 
     <!-- Fontfaces CSS-->
     <link href="Vistas/resources/css/font-face.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="Vistas/resources/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <!--<link href="Vistas/resources/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">-->
     <link href="Vistas/resources/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
@@ -31,6 +32,7 @@
 
     <!-- Main CSS-->
     <link href="Vistas/resources/css/theme.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="fonts.css">
 
 </head>
 
@@ -51,7 +53,7 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Principal</a>
+                                <i class="icon icon-home"></i>Principal</a>
                             
                         </li>
                           <li>
