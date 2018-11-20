@@ -42,10 +42,6 @@
 					<span class="login100-form-title p-b-49">
 						Login
 					</span>
-
-					
-				
-
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "El Documento es Requerido">
 						<span class="label-input100">Documento</span>
 						<input class="input100" type="text" name="Login[documento]" placeholder="Escriba Su Documento" >
@@ -57,11 +53,8 @@
 						<input class="input100" type="password" name="Login[contrasena]" placeholder="Escriba Su Contraseña">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
-					
 					<div class="text-right p-t-8 p-b-31">
-						
 					</div>
-					
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
@@ -77,9 +70,6 @@
 							<a class="login100-form-btn" href="portada.php">Salir</a>
 						</div>
 					</div>
-
-									
-
 				</form>
 			</div>
 		</div>
