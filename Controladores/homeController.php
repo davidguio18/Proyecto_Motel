@@ -29,11 +29,14 @@
 
 
 
-		private function home(){
-			header("location: index.php?c=habitaciones&a=admin2");
+		private function home()
+        {
+            header("location: index.php?c=habitaciones&a=admin2");
+        }
 
 		private function homeAdmmin(){
-			header( "Vistas/home/home.php");
+		    echo "Hola";
+            header("location: Vistas/home/home.php");
 
 		}
 
