@@ -29,7 +29,6 @@
     <link href="Vistas/resources/vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-
     <!-- Main CSS-->
     <link href="Vistas/resources/css/theme.css" rel="stylesheet" media="all">
     <link rel="stylesheet" type="text/css" href="fonts.css">
@@ -38,9 +37,6 @@
 
 <body class="animsition">
     <div class="page-wrapper">
-       
-       
-
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
@@ -54,33 +50,35 @@
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="icon icon-home"></i>Principal</a>
+                            <a class="js-arrow" href="index.php?c=home&a=home">
+                                <i class="index.php?c=home&a=home"></i>Principal</a>
                             
                         </li>
                           <li>
-                            <a href="#">
+                            <a href="index.php?c=vehiculos&a=create">
                                 <i class="fas fa-calendar-alt"></i>Registrar Vehículo</a>
                         </li>
                          <li>
-                            <a href="#">
+                            <a href="index.php?c=alquiler&a=create">
                                 <i class="fas fa-calendar-alt"></i>Registrar Alquiler</a>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href="index.php?c=servicios&a=create">
                                 <i class="far fa-check-square"></i>Registrar Servicio</a>
                         </li>
                         <li>
-                            <a href="chart.html">
+                            <a href=index.php?c=producto&a=create>
                                 <i class="fas fa-chart-bar"></i>Registrar Producto</a>
                         </li>
                           <li>
-                            <a href="chart.html">
+                            <a href="index.php?c=usuarios&a=create">
                                 <i class="fas fa-chart-bar"></i>Registrar Usuario de Sistema</a>
                         </li>
                         
                         
                        
                         <li>
-                            <a href="index.php?c=habitaciones&a=create">
+                            <a href="index.php?c=habitaciones&a=create"">
                                 <i class="fas fa-map-marker-alt"></i>Registrar Habitaci&oacute;n</a>
                         </li>
                         <li class="has-sub">
@@ -88,19 +86,19 @@
                                 <i class="fas fa-copy"></i>Administrar</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="login.html">Alquileres</a>
+                                    <a href="index.php?c=alquiler&a=admin">Alquileres</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Servicios</a>
+                                    <a href="index.php?c=servicios&a=admin">Servicios</a>
                                 </li>
                                 <li>
-                                    <a href="forget-pass.html">Productos</a>
+                                    <a href="index.php?c=productos&a=admin">Productos</a>
                                 </li>
                                 <li>
-                                    <a href="forget-pass.html">Habitaciones</a>
+                                    <a href="index.php?c=habitaciones&a=admin">Habitaciones</a>
                                 </li>
                                 <li>
-                                    <a href="forget-pass.html">Veh&iacute;culos</a>
+                                    <a href="index.php?c=vehiculos&a=admin">Veh&iacute;culos</a>
                                 </li>
                             </ul>
                         </li>
@@ -127,14 +125,15 @@
                                     <div class="account-item clearfix js-item-menu">
                                        
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#"><?=  $_SESSION["Usuario"]->nombres ?></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             
                                           
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                <a href="index.php?c=home&a=logout">
+                                                    <i class="zmdi zmdi-power"></i>
+</a>
                                             </div>
                                         </div>
                                     </div>

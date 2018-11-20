@@ -27,10 +27,10 @@
                                    
                                                <th>Id</th>
                                                 <th>Producto</th>
-                                                <th>Precio</th>
-                                                <th>Solicitud</th>
-                                                <th>Alquiler</th>
                                                 <th>Cantidad</th>
+                                                <th>Precio</th>
+                                                <th>Alquiler</th>
+                                                <th>Solicitud</th>
                                          
                                          </tr>
                                         </thead>
@@ -38,28 +38,30 @@
                                         <tbody>
                                             <tr class="tr-shadow">
                                                 <td>
-                                               <?= $servicio->id_servicio; ?>
+                                                  <?= $servicio->id_servicio; ?>
                                                 </td>
-                                                <td><?= $servicio->producto; ?></td>
-                                                <td>
-                                                    <span class="block-email"> <?= $servicio->precio; ?> </span>
+                                                <td><?= $servicio->Producto->nombre; ?></td>
+                                                <td class="desc"> <?= $servicio->cantidad; ?> </td>
+                                                <td >
+                                                    <span class="status--process"><?= $servicio->precio; ?></span>
                                                 </td>
-                                                <td class="desc"><?= $servicio->solicitud; ?></td>
                                                 <td><?= $servicio->alquiler; ?></td>
-                                                <td>
-                                                    <span class="status--process"><?= $servicio->cantidad; ?></span>
-                                                </td>
+                                                <td class="desc"><?= $servicio->solicitud; ?></td>
                                                 
                                                 <td>
                                                     <div class="table-data-feature">
                                                         
                                                        <td> 
-                                                         <a href="index.php?c=servicios&a=update&id=<?= $servicio->id_servicio; ?>">Editar</a>
+                                                        <button type="submit" class="btn btn-primary btn-sm">
+                                                         <i class="fa fa-dot-circle-o"><a href="index.php?c=servicios&a=update&id=<?= $servicio->id_servicio; ?>"style="color:#f6f7f9;">Editar</i> 
+                                                </button>
                                                         </td>
 
                                                         <td>
-                                                            
-                                                            <a href="index.php?c=servicios&a=delete&id=<?= $servicio->id_servicio; ?>">Eliminar</a> 
+                                                   <button type="submit" class="btn btn-danger btn-sm">
+                                                <i class="fa fa-ban"><a href="index.php?c=servicios&a=delete&id=<?= $servicio->id_servicio; ?>" style="color:#f6f7f9;" ></i> Eliminar
+                                                </button>
+                                                        
                                                         </td>
                                                         
                                                     </div>
