@@ -1,5 +1,8 @@
 <?php
     require_once ("conexion.php");
+    require_once ("Modelos/habitaciones.php");
+    require_once ("Modelos/Usuarios.php");
+    require_once ("Modelos/Vehiculos.php");
 
     class Alquiler extends conexion{
 
@@ -10,6 +13,8 @@
         public $ingreso;
         public $salida;
         public $vendedor;
+
+
 
         public function __construct(){
             parent::__construct();
@@ -29,6 +34,9 @@
         }
 
 
+        /**
+         * @return array
+         */
         public function listar(){
             $conexion = $this->getConexion();
             $stm = $conexion->prepare("SELECT * FROM alquileres");
@@ -38,6 +46,22 @@
             $stm->execute();
 
             while ($obj = $stm->fetch()) {
+
+                //traemos el objeto habitacion con el id de todos los alquileres  y a habitacion
+                // le volvemos a traer el objeto para que imprima todos los alquileres
+                $hab = new habitaciones();
+                $hab->findByPk($obj->habitacion);
+                $obj->Habitacion =  $hab;
+
+                $veh = new Vehiculos();
+                $veh->findByPk($obj->cliente);
+                $obj->Cliente = $veh;
+
+                $cl = new Usuarios();
+                $cl->findByPk($obj->vendedor);
+                $obj->Vendedor = $cl;
+
+                // imprimimos los objetos del alquiler para mostrarlos
                 $alquiler[]=$obj;
             }
             return $alquiler;
@@ -46,13 +70,14 @@
 
         public function update(){
             $conexion = $this->getConexion();
-            $stm = $conexion->prepare("UPDATE alquileres SET habitacion = :habitacion, cliente = :cliente, valor_hora = :valor_hora, ingreso = :ingreso, salida = :salida, vendedor = :vendedor WHERE id_alquiler = :id");
-            $stm->bindParam(":habitacion",$this->habitacion);
-            $stm->bindParam(":cliente",$this->cliente);
-            $stm->bindParam(":valor_hora",$this->valor_hora);
-            $stm->bindParam(":ingreso",$this->ingreso);
+            $stm = $conexion->prepare("UPDATE alquileres SET salida = :salida  WHERE id_alquiler = :id");
+            $stm->bindParam(":id",$this->id_alquiler);
+            //$stm->bindParam(":habitacion",$this->habitacion);
+            //$stm->bindParam(":cliente",$this->cliente);
+            //$stm->bindParam(":valor_hora",$this->valor_hora);
+            //$stm->bindParam(":ingreso",$this->ingreso);
             $stm->bindParam(":salida",$this->salida);
-            $stm->bindParam(":vendedor",$this->vendedor);
+            //$stm->bindParam(":vendedor",$this->vendedor);
 
             $stm->execute();
 
@@ -65,6 +90,18 @@
             $stm->bindParam(":id",$id);
             $stm->execute();
             $stm->fetch();
+
+            $hab = new habitaciones();
+            $hab->findByPk($this->habitacion);
+            $this->habitacion =  $hab;
+
+            $veh = new Vehiculos();
+            $veh->findByPk($this->cliente);
+            $this->cliente = $veh;
+
+            $cl = new Usuarios();
+            $cl->findByPk($this->vendedor);
+            $this->vendedor = $cl;
         }
 
         public function delete($id){
