@@ -3,28 +3,28 @@
 <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div class="row" style="margin-left: 60px;">
+                            <div class="col-lg-11">
+                            <div class="col-lg-12">
                                 
                                 <div class="card">
                                     <div class="card-header">
-                                        <strong>Ingresar </strong> Vehiculo
+                                        <strong>Registrar </strong> Vehiculo
                                     </div>
                                     <div class="card-body card-block">
                                         <form action="" method="post" class="">
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Placa</label>
-                                              <input type="text" id="nf-email" name="Vehiculos[placa]"  placeholder="Ingrese la placa" class="form-control"    minlength="3" maxlength="6">
-
+                                              <input type="text" id="nf-email" name="Vehiculos[placa]"  placeholder="Ingrese la placa" class="form-control" required  minlength="3" maxlength="6">
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Marca</label>
                                                 <input type="text" id="nf-email" name="Vehiculos[marca]"  placeholder="Ingrese la marca " class="form-control"  required  minlength="3" maxlength="20">
-
                                             </div>
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Servicio</label>
-                                                <select name="Vehiculos[servicio]" required>
+                                                <select name="Vehiculos[servicio]" required class="form-control">
+                                                <select  class="form-control" name="Vehiculos[servicio]" required>
                                                      <option value="">Seleccione</option>
                                                      <option value="Particular" >Particular</option>
                                                      <option value="Publico" >Publico</option>

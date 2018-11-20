@@ -1,5 +1,6 @@
 <?php 
 	require_once("Conexion.php");
+	require_once ("Modelos/Productos.php");
 
 	class Servicios extends Conexion{
 
@@ -37,6 +38,12 @@
 			$stm->execute();
 
 			while ($obj = $stm->fetch()) {
+
+				$prod = new Productos();
+                $prod->findByPk($obj->producto);
+                $obj->Producto =  $prod;
+
+
 				$servicios[]=$obj;
 			}
 			return $servicios;

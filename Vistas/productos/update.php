@@ -1,3 +1,4 @@
+
 <?php include_once ("Vistas/cabecera.php"); ?>
 
 <div class="main-content">

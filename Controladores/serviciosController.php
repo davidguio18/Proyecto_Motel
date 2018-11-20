@@ -1,5 +1,7 @@
 <?php 
-	require "Modelos/Servicios.php";
+	require_once ("Modelos/Servicios.php");
+	require_once ("Modelos/Alquiler.php");
+
 	class servicioscontroller{
 
 		public static function main($action){
@@ -42,9 +44,13 @@
 				}else{
 					echo "Ocurrio un error al guardar";
 				}
+			}else {
+                // carga el numero de las habitaciones Disponibles
+                $alq = new Alquiler();
+                $codAlq = $alq->listar();
 
-			}else
-				require "Vistas/servicios/create.php";
+                require "Vistas/servicios/create.php";
+            }
 		}
 
 		private function update(){

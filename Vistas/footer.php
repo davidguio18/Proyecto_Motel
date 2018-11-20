@@ -1,7 +1,8 @@
-   </div>
-
+                </div>
+            </div>
+        </div>
     </div>
-
+</div>
     <!-- Jquery JS-->
     <script src="Vistas/resources/vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->

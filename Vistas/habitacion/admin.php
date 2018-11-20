@@ -28,14 +28,13 @@
                                     <table class="table table-data2">
                                         <thead>
                                             <tr>
-                                   
                                                 <th>Id</th>
                                                 <th>N&uacute;mero</th>
                                                 <th>Tipo</th>
                                                 <th>Valor Noche</th>
                                                 <th>Estado</th>
-                                                <th></th>
-                                         </tr>
+                                                <th colspan="2" style="text-align: center">Acci&oacute;n</th>
+                                            </tr>
                                         </thead>
                                         <?php foreach($habitacion as $habitacion) { ?>
                                         <tbody>
@@ -55,12 +54,16 @@
                                                 <td>
                                                     <div class="table-data-feature">
                                                         
-                                                         <a href="index.php?c=habitaciones&a=update&id=<?= $habitacion->id_habitacion; ?>">Editar</a>
+                                                        <button type="submit" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-dot-circle-o"><a href="index.php?c=habitaciones&a=update&id=<?= $habitacion->id_habitacion; ?>" style="color:#f6f7f9;" >Editar</i> 
+                                                </button> 
                                                 </td>   
                                                 <td>
-                                                         <a href="index.php?c=habitaciones&a=delete&id=<?= $habitacion->id_habitacion; ?>">Eliminar</a>
+                                                         <button type="submit" class="btn btn-danger btn-sm">
+                                                    <i class="fa fa-ban"><a href="index.php?c=habitaciones&a=delete&id=<?= $habitacion->id_habitacion; ?>" style="color:#f6f7f9;" ></i> Eliminar
+                                                </button>
                                                            
-                                                        </button>
+                                                </td>
                                                     </div>
                                                 </td>
                                             </tr>
