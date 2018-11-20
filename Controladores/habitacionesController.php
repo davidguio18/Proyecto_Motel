@@ -16,11 +16,17 @@ class habitacionesController {
 			case "update":
 				$_this->update();
 				break;
+				case "update2":
+				$_this->update2();
+				break;
 			case "view":
 				$_this->view();
 				break;
-			case "admin":
+				case "admin":
 				$_this->admin();
+				break;
+				case "admin2":
+				$_this->admin2();
 				break;
             case "getValor":
                 $_this->getvalor();
@@ -35,6 +41,13 @@ class habitacionesController {
 		$habitacion = $habit->listar();
 
 		require "Vistas/habitacion/admin.php";
+
+		}
+		private function admin2(){
+		$habit = new habitaciones();
+		$habitacion = $habit->listar2();
+
+		require "Vistas/habitacion/admin2.php";
 
 		}
 
@@ -78,6 +91,20 @@ class habitacionesController {
 			require "Vistas/habitacion/update.php";
 		}
 	}
+	private function update2(){
+		$habitacion = new habitaciones();
+		$habitacion->findByPK($_GET["id"]);
+
+		if(isset($_POST["habitaciones"])){
+			$habitacion->estado = $_POST["habitaciones"]["estado"];
+	
+			$habitacion->update2();
+			header("Location: index.php?c=habitaciones&a=admin2");
+		}else{
+			require "Vistas/habitacion/update2.php";
+		}
+	}
+
 
 	private function delete(){
 		$habitacion = new habitaciones();
