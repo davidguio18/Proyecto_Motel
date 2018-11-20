@@ -15,11 +15,10 @@
                                 <!-- DATA TABLE -->
                                 <h3 class="title-5 m-b-35">Listado de Habitaciones</h3>
                                 <div class="table-data__tool">
-                                    <div class="table-data__tool-left">
+                                    <div class="form-control">
 
-                                        <form method="post" action="index.php?c=habitaciones&a=view" autocomplete="off"> 
-                                         <input  name="hbt" type="text" placeholder="Buscar aquí..." autofocus >
-                                      <button type="submit">buscar</button>
+                                    <form method="post" action="index.php?c=habitaciones&a=view" autocomplete="off"> 
+                                         <input  name="hbt" type="text" placeholder="Buscar..." autofocus class="form-control">
                                   </form>
 
                                     </div>
@@ -80,3 +79,5 @@
  <?php 
     include_once ("Vistas/footer.php");
   ?>
+
+  
