@@ -28,16 +28,7 @@
                                         </thead>
                                         <tbody>
                                             <?php foreach($vehiculos as $vehiculo){ ?>
-                                                <tr>
-                                                    <th><?= $vehiculo->id_cliente; ?></th>
-                                                    <td><?= $vehiculo->placa; ?></td>
-                                                    <td><?= $vehiculo->marca; ?></td>
-                                                    <td><?= $vehiculo->servicio; ?></td>
-                                                    <td><?= $vehiculo->registro; ?></td>
-                                                    <td> <a href="index.php?c=vehiculos&a=update&id=<?= $vehiculo->id_cliente; ?>">Editar</a> </td>
-                                                    <td> <a href="index.php?c=vehiculos&a=delete&id=<?= $vehiculo->id_cliente; ?>">Eliminar</a> </td>
-                                                </tr>
-                                            <?php } ?>
+                                            
                                             <tr class="tr-shadow">
                                                <tr>
 			                               		<th><?= $vehiculo->id_cliente; ?></th>
