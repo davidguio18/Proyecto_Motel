@@ -15,7 +15,7 @@
     <!-- Fontfaces CSS-->
     <link href="Vistas/resources/css/font-face.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!--<link href="Vistas/resources/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">-->
+    <link href="Vistas/resources/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
@@ -48,8 +48,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="icon icon-home"></i>Principal</a>
+                            
                             <a class="js-arrow" href="index.php?c=home&a=home">
                                 <i class="index.php?c=home&a=home"></i>Principal</a>
                             
@@ -92,7 +91,7 @@
                                     <a href="index.php?c=servicios&a=admin">Servicios</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?c=productos&a=admin">Productos</a>
+                                    <a href="index.php?c=producto&a=admin">Productos</a>
                                 </li>
                                 <li>
                                     <a href="index.php?c=habitaciones&a=admin">Habitaciones</a>
