@@ -15,7 +15,7 @@
     <!-- Fontfaces CSS-->
     <link href="Vistas/resources/css/font-face.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!--<link href="Vistas/resources/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">-->
+    <link href="Vistas/resources/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
@@ -32,7 +32,7 @@
 
     <!-- Main CSS-->
     <link href="Vistas/resources/css/theme.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" type="text/css" href="fonts.css">
+    
 
 </head>
 
