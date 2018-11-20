@@ -5,6 +5,8 @@
                     <div class="container-fluid">
                         <div class="row" style="margin-left: 60px;">
                             <div class="col-lg-11">
+                            <div class="col-lg-12">
+                                
                                 <div class="card">
                                     <div class="card-header">
                                         <strong>Registrar </strong> Vehiculo

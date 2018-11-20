@@ -54,6 +54,18 @@ class Usuarios extends Conexion{
 		$stm->fetch();
 		
 	}
+
+	public function findByDocument($doc){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("SELECT * FROM Usuarios WHERE documento = :doc");
+		$stm ->setFetchMode(PDO::FETCH_INTO,$this);
+
+		$stm->bindParam(":doc",$doc);
+		$stm-> execute();
+		$stm->fetch();
+		
+	}
+
 	public function delete($id){
 		$conexion = $this->getConexion();
 		$stm =$conexion->prepare("DELETE FROM Usuarios WHERE id_usuario = :id");

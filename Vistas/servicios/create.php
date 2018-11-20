@@ -1,3 +1,6 @@
+
+<?php include_once ("Vistas/cabecera.php"); ?>
+
 <script type="js/jquery-3.3.1.min.js"></script>
 <?php include_once ("Vistas/cabecera.php"); ?>
 
@@ -14,11 +17,8 @@
                                         <form action="" method="post" class="" >
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Producto</label>
-                                                <select name="Servicios[producto]" required="" id="precioProducto" onchange="getPrecioProducto()" class="form-control">
+                                                <select required="" name="Servicios[producto]" id="precioProducto" onchange="getPrecioProducto()" class="form-control">
                                                    <option>Selecciona</option>
-                                                <label for="nf-email" class="form-control-label">Producto</label>
-                                                <select name="Servicios[producto]" class="form-control" required="" id="precioProducto" onchange="getPrecioProducto()">
-                                                   <option>Selecci&oacute;n</option>
                                                     <?php 
                                                         require_once("Modelos/Productos.php");
                                                         $prod = new Productos();
@@ -32,7 +32,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Cantidad</label>
-                                                <input type="text" id="cant" name="Servicios[cantidad]" placeholder="Ingrese Cantidad.." class="form-control" required onchange="multiplicar();">
+                                                <input type="text" id="cant" name="Servicios[cantidad]" placeholder="Ingrese Cantidad.." class="form-control" required="" onchange="multiplicar();" autocomplete="off">
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Precio</label>
@@ -45,11 +45,12 @@
                                             <div class="form-group">
                                                 <label for="nf-email" class="form-control-label">Alquiler</label>
                                                 <select required name="Servicios[alquiler]" class="form-control" >
-                                                    <option value="">Selecci&oacute;n</option>
+                                                    <option value="">Selecciona</option>
                                                     <?php foreach ($codAlq as $codigoAlquiler) { ?>
-                                                        <option value="<?= $codigoAlquiler->id_alquiler ?>"><?= $codigoAlquiler->id_alquiler ?></option>
+                                                        <option value="<?= $codigoAlquiler->id_alquiler ?>"> <?= $codigoAlquiler->id_alquiler ?></option>
                                                     <?php } ?>
                                                 </select>
+                                                
                                             </div>
                                              
                                              <div class="card-footer">
@@ -77,10 +78,9 @@
                                         </script>
                                          <script type="text/javascript">
                                             function multiplicar(){
-                                            m1 = document.getElementById("oculto").value;
-                                            m2 = document.getElementById("cant").value;
-                                            r = m1*m2;
-                                            document.getElementById("prec").value = r;
+                                            m1 = $("#oculto").val();
+                                            m2 =  $("#cant").val();
+                                            r = $("#prec").val(m1*m2) ;
 }
                                         </script>
                                        

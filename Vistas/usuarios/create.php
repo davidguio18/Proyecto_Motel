@@ -5,6 +5,8 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-12">
+
+                                
                                 <div class="card">
                                     <div class="card-header">
                                         <strong>Ingresar </strong> Usuario
@@ -13,7 +15,7 @@
                                         <form action="" method="post" class="" autocomplete="off">
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Nombres</label>
-                                                <input type="text" id="nf-email" name= "Usuarios[nombres]" placeholder="Ingrese Nombre de Usuario.." class="form-control" required>
+                                                <input type="text" id="nf-email" maxlength="30" name= "Usuarios[nombres]" placeholder="Ingrese Nombre de Usuario.." class="form-control" required>
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Apellidos</label>
@@ -29,7 +31,7 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Documento</label>
-                                                <input type="number" id="nf-email" placeholder="Ingrese Numero de Documento.." class="form-control" required name="Usuarios[documento]" onkeypress="return valida(event)">
+                                                <input type="number" maxlength="12" id="nf-email" placeholder="Ingrese Numero de Documento.." class="form-control" required name="Usuarios[documento]" onkeypress="return valida(event)">
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Contraseña</label>

@@ -15,12 +15,12 @@
                                 <!-- DATA TABLE -->
                                 <h3 class="title-5 m-b-35">Listado de Habitaciones</h3>
                                 <div class="table-data__tool">
-                                    <div class="table-data__tool-left">
+                                    <div class="form-control">
 
-                                        <form method="post" action="index.php?c=habitaciones&a=view" autocomplete="off"> 
-                                         <input name="hbt" type="text" placeholder="Buscar aquí..." autofocus >
-                                      <button type="submit">buscar</button>
-                                        
+                                    <form method="post" action="index.php?c=habitaciones&a=view" autocomplete="off"> 
+                                         <input  name="hbt" type="text" placeholder="Buscar..." autofocus class="form-control">
+                                  </form>
+
                                     </div>
                                     
                                 </div>
@@ -54,10 +54,14 @@
                                                 <td>
                                                     <div class="table-data-feature">
                                                         
-                                                         <a href="index.php?c=habitaciones&a=update&id=<?= $habitacion->id_habitacion; ?>">Editar</a>
+                                                        <button type="submit" class="btn btn-primary btn-sm">
+                                                    <i class="fa fa-dot-circle-o"><a href="index.php?c=habitaciones&a=update&id=<?= $habitacion->id_habitacion; ?>" style="color:#f6f7f9;" >Editar</i> 
+                                                </button> 
                                                 </td>   
                                                 <td>
-                                                         <a href="index.php?c=habitaciones&a=delete&id=<?= $habitacion->id_habitacion; ?>">Eliminar</a>
+                                                         <button type="submit" class="btn btn-danger btn-sm">
+                                                    <i class="fa fa-ban"><a href="index.php?c=habitaciones&a=delete&id=<?= $habitacion->id_habitacion; ?>" style="color:#f6f7f9;" ></i> Eliminar
+                                                </button>
                                                            
                                                 </td>
                                                     </div>
@@ -75,3 +79,5 @@
  <?php 
     include_once ("Vistas/footer.php");
   ?>
+
+  
