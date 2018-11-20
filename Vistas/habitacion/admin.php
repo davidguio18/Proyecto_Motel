@@ -18,9 +18,10 @@
                                     <div class="table-data__tool-left">
 
                                         <form method="post" action="index.php?c=habitaciones&a=view" autocomplete="off"> 
-                                         <input name="hbt" type="text" placeholder="Buscar aquí..." autofocus >
+                                         <input  name="hbt" type="text" placeholder="Buscar aquí..." autofocus >
                                       <button type="submit">buscar</button>
-                                        
+                                  </form>
+
                                     </div>
                                     
                                 </div>
