@@ -53,6 +53,7 @@
                                         </td>
                                     </tr>
                                 <?php } ?>
+                                    <tr class="spacer"></tr>
                                 </tbody>
                                 <script type="text/javascript">
                                     function eliminar(id){
