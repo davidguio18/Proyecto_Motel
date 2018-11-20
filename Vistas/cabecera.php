@@ -47,7 +47,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="Vistas/home/home.php">
+                            <a class="js-arrow" href="index.php?c=home&a=homeAdmin">
                                 <i class="fas fa-tachometer-alt"></i>Principal
                             </a>
                         </li>
