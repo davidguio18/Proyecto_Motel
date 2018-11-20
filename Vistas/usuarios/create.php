@@ -19,7 +19,6 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Apellidos</label>
-                                                <input type="text" maxlength="30" id="nf-email" name="Usuarios[apellidos]" placeholder="Ingrese Marca de Producto.." class="form-control" required>
                                                 <input type="text" id="nf-email" name="Usuarios[apellidos]" placeholder="Ingrese Apellidos" class="form-control" required>
                                             </div>
                                              <div class="form-group">

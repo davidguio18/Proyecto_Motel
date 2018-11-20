@@ -15,7 +15,7 @@
     <!-- Fontfaces CSS-->
     <link href="Vistas/resources/css/font-face.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!--<link href="Vistas/resources/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">-->
+    <link href="Vistas/resources/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="Vistas/resources/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
@@ -50,25 +50,25 @@
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="icon icon-home"></i>Principal</a>
-                            <a class="js-arrow" href="index.php?c=home&a=home">
+                            <a class="js-arrow" href="index.php?c=habitaciones&a=admin2">
                                 <i class="index.php?c=home&a=home"></i>Principal</a>
                             
                         </li>
                           <li>
                             <a href="index.php?c=vehiculos&a=create">
-                                <i class="fas fa-calendar-alt"></i>Registrar Vehículo</a>
+                                <i  class="fa fa-car"></i>Registrar Vehículo</a>
                         </li>
                          <li>
                             <a href="index.php?c=alquiler&a=create">
-                                <i class="fas fa-calendar-alt"></i>Registrar Alquiler</a>
+                                <i  class="fa fa-calculator"></i>Registrar Alquiler</a>
                         </li>
                         <li>
                             <a href="index.php?c=servicios&a=create">
-                                <i class="far fa-check-square"></i>Registrar Servicio</a>
+                                <i class="fa fa-clock-o"></i>Registrar Servicio</a>
                         </li>
                         <li>
                             <a href=index.php?c=producto&a=create>
-                                <i class="fas fa-chart-bar"></i>Registrar Producto</a>
+                                <i class="fa fa-truck" ></i>Registrar Producto</a>
                         </li>
                           <li>
                             <a href="index.php?c=usuarios&a=create">
@@ -79,7 +79,7 @@
                        
                         <li>
                             <a href="index.php?c=habitaciones&a=create"">
-                                <i class="fas fa-map-marker-alt"></i>Registrar Habitaci&oacute;n</a>
+                                <i class="fa fa-hospital-o"></i>Registrar Habitaci&oacute;n</a>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
@@ -92,7 +92,7 @@
                                     <a href="index.php?c=servicios&a=admin">Servicios</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?c=productos&a=admin">Productos</a>
+                                    <a href="index.php?c=producto&a=admin">Productos</a>
                                 </li>
                                 <li>
                                     <a href="index.php?c=habitaciones&a=admin">Habitaciones</a>

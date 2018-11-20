@@ -75,16 +75,28 @@
             $alquiler->findByPk($_GET["id"]);
 
             if(isset($_POST["Alquiler"])){
-                $alquiler->habitacion = $_POST["Productos"]["nombre"];
-                $alquiler->cliente = $_POST["Productos"]["marca"];
-                $alquiler->valor_hora = $_POST["Productos"]["cantidad"];
-                $alquiler->ingreso = $_POST["Productos"]["precio"];
-                $alquiler->salida = $_POST["Productos"]["estado"];
-                $alquiler->vendedor = $_POST["Productos"]["estado"];
+               // $alquiler->habitacion = $_POST["Alquiler"]["nombre"];
+                //$alquiler->cliente = $_POST["Alquiler"]["marca"];
+                //$alquiler->valor_hora = $_POST["Alquiler"]["cantidad"];
+                //$alquiler->ingreso = $_POST["Alquiler"]["precio"];
+                $alquiler->salida = $_POST["Alquiler"]["salida"];
+                //$alquiler->vendedor = $_POST["Alquiler"]["estado"];
 
                 $alquiler->update();
                 header("Location: index.php?c=alquiler&a=admin");
             }else{
+                // carga el numero de las habitaciones Disponibles
+                $hab = new habitaciones();
+                $numHab = $hab->listar();
+
+                //cargar la placa de los usuarios
+                $vehiculos = new Vehiculos();
+                $placaVehiculo = $vehiculos->listar();
+
+                // carga el nombre y apellidos del vendedor
+                $usuario = new Usuarios();
+                $vendedores = $usuario->vew();
+
                 require "Vistas/alquiler/update.php";
             }
         }

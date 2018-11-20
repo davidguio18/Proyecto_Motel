@@ -70,13 +70,14 @@
 
         public function update(){
             $conexion = $this->getConexion();
-            $stm = $conexion->prepare("UPDATE alquileres SET habitacion = :habitacion, cliente = :cliente, valor_hora = :valor_hora, ingreso = :ingreso, salida = :salida, vendedor = :vendedor WHERE id_alquiler = :id");
-            $stm->bindParam(":habitacion",$this->habitacion);
-            $stm->bindParam(":cliente",$this->cliente);
-            $stm->bindParam(":valor_hora",$this->valor_hora);
-            $stm->bindParam(":ingreso",$this->ingreso);
+            $stm = $conexion->prepare("UPDATE alquileres SET salida = :salida  WHERE id_alquiler = :id");
+            $stm->bindParam(":id",$this->id_alquiler);
+            //$stm->bindParam(":habitacion",$this->habitacion);
+            //$stm->bindParam(":cliente",$this->cliente);
+            //$stm->bindParam(":valor_hora",$this->valor_hora);
+            //$stm->bindParam(":ingreso",$this->ingreso);
             $stm->bindParam(":salida",$this->salida);
-            $stm->bindParam(":vendedor",$this->vendedor);
+            //$stm->bindParam(":vendedor",$this->vendedor);
 
             $stm->execute();
 
@@ -92,15 +93,15 @@
 
             $hab = new habitaciones();
             $hab->findByPk($this->habitacion);
-            $this->Habitacion =  $hab;
+            $this->habitacion =  $hab;
 
             $veh = new Vehiculos();
             $veh->findByPk($this->cliente);
-            $this->Cliente = $veh;
+            $this->cliente = $veh;
 
             $cl = new Usuarios();
             $cl->findByPk($this->vendedor);
-            $this->Vendedor = $cl;
+            $this->vendedor = $cl;
         }
 
         public function delete($id){

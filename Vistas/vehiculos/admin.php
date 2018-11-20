@@ -32,10 +32,10 @@
                                             <tr class="tr-shadow">
                                                <tr>
 			                               		<th><?= $vehiculo->id_cliente; ?></th>
-				                                <td><?= $vehiculo->placa; ?></td>
+				                                <td ><?= $vehiculo->placa; ?></td>
 				                                <td><?= $vehiculo->marca; ?></td>
-				                                <td><?= $vehiculo->servicio; ?></td>
-				                                <td><?= $vehiculo->registro; ?></td>
+				                                <td ><?= $vehiculo->servicio; ?></td>
+				                                <td class="desc"><?= $vehiculo->registro; ?></td>
 				                                
 				                                <td> <button type="submit" class="btn btn-primary btn-sm">
                                                     <i class="fa fa-dot-circle-o"><a href="index.php?c=vehiculos&a=update&id=<?= $vehiculo->id_cliente; ?>" style="color:#f6f7f9;" >Editar</i> 
