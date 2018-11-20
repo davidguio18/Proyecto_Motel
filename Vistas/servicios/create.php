@@ -9,7 +9,6 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-12">
-                                
                                 <div class="card">
                                     <div class="card-header">
                                         <strong>Registrar </strong> Servicio
@@ -18,15 +17,13 @@
                                         <form action="" method="post" class="" >
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Producto</label>
-                                                <select name="Servicios[producto]" required="" id="precioProducto" onchange="getPrecioProducto()" class="form-control">
-              
+                                                <select required="" name="Servicios[producto]" id="precioProducto" onchange="getPrecioProducto()" class="form-control">
                                                    <option>Selecciona</option>
                                                     <?php 
                                                         require_once("Modelos/Productos.php");
                                                         $prod = new Productos();
                                                         $productos = $prod->listar();
                                                      ?>
-
                                                     <?php foreach ( $productos as $producto) {?>
                                                     <option value="<?=$producto->id_producto; ?>"><?=$producto->nombre; ?></option>
                                                     <?php } ?>
@@ -35,7 +32,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Cantidad</label>
-                                                <input type="text" id="cant" name="Servicios[cantidad]" placeholder="Ingrese Cantidad.." class="form-control" required onchange="multiplicar();">
+                                                <input type="text" id="cant" name="Servicios[cantidad]" placeholder="Ingrese Cantidad.." class="form-control" required="" onchange="multiplicar();" autocomplete="off">
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Precio</label>
@@ -46,6 +43,13 @@
                                                 <input readonly="" type="text" id="nf-email" name="Servicios[solicitud]" value="<?php echo date ('  Y/m/d  h:i:s');?>" placeholder="Ingrese Solicitud.." class="form-control" required>
                                             </div>
                                             <div class="form-group">
+                                                <label for="nf-email" class="form-control-label">Alquiler</label>
+                                                <select required name="Servicios[alquiler]" class="form-control" >
+                                                    <option value="">Selecciona</option>
+                                                    <?php foreach ($codAlq as $codigoAlquiler) { ?>
+                                                        <option value="<?= $codigoAlquiler->id_alquiler ?>"> <?= $codigoAlquiler->id_alquiler ?></option>
+                                                    <?php } ?>
+                                                </select>
                                                 <label for="nf-email" class=" form-control-label">Alquiler</label>
                                                 <input type="number" id="nf-email" name="Servicios[alquiler]" placeholder="Ingrese Alquiler.." class="form-control" required>
                                             </div>
@@ -83,10 +87,9 @@
                                         </script>
                                          <script type="text/javascript">
                                             function multiplicar(){
-                                            m1 = document.getElementById("oculto").value;
-                                            m2 = document.getElementById("cant").value;
-                                            r = m1*m2;
-                                            document.getElementById("prec").value = r;
+                                            m1 = $("#oculto").val();
+                                            m2 =  $("#cant").val();
+                                            r = $("#prec").val(m1*m2) ;
 }
                                         </script>
                                        

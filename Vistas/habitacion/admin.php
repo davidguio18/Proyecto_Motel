@@ -33,7 +33,7 @@
                                                 <th>Tipo</th>
                                                 <th>Valor Noche</th>
                                                 <th>Estado</th>
-                                                <th></th>
+                                                <th colspan="2" style="text-align: center">Acci&oacute;n</th>
                                             </tr>
                                         </thead>
                                         <?php foreach($habitacion as $habitacion) { ?>

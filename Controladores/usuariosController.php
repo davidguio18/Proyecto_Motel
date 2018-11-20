@@ -27,6 +27,7 @@ class usuariosController{
 				break;
 		}
 	}
+
 	private function create(){
 		if(isset($_POST["Usuarios"])){
 			//guardar en la BBDD
@@ -49,6 +50,7 @@ class usuariosController{
 
 		require "Vistas/usuarios/create.php";
 	}
+
 	private function admin (){
 		//consultamos listado de la BBDD
 		$user = new Usuarios();
@@ -67,12 +69,11 @@ class usuariosController{
 		$usuario->findByPk($_GET["id"]);
 
 		if(isset($_POST["Usuarios"])){
-		
 		$usuario->nombres = $_POST["Usuarios"]["nombres"];
 		$usuario->apellidos  = $_POST["Usuarios"]["apellidos"];
 		$usuario->perfil = $_POST ["Usuarios"]["perfil"];
 		$usuario->documento = $_POST["Usuarios"]["documento"];
-		$usuario->contrasena  = $_POST["Usuarios"]["contrasena"];
+		$usuario->contrasena  = password_hash($_POST["Usuarios"]["contrasena"], PASSWORD_DEFAULT);
 			
 		$usuario->update();
 		header("Location: index.php?c=usuarios&a=admin");
@@ -82,19 +83,14 @@ class usuariosController{
 	}
 
 
-private function delete(){
-		$usuario = new Usuarios();
-		if(isset($_GET["id"])){
-			$usuario->delete($_GET["id"]); 
-			
-			header("Location: index.php?c=usuarios&a=admin");
-		}
+    private function delete(){
+        $usuario = new Usuarios();
+        if(isset($_GET["id"])){
+            $usuario->delete($_GET["id"]);
 
+            header("Location: index.php?c=usuarios&a=admin");
+        }
 	}
 
-
-
 }
-
-
- ?>
+?>
