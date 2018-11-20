@@ -1,15 +1,10 @@
-
-<?php include_once ("Vistas/cabecera.php"); ?>
-
-<?php include_once ("Vistas/cabecera.php"); ?>
-<?php include_once ("Proyecto_Motel/Vistas/cabecera.php"); ?>
 <?php include_once ("Vistas/cabecera.php"); ?>
 
 <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 
                                 <div class="card">
                                     <div class="card-header">

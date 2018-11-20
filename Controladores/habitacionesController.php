@@ -113,6 +113,13 @@ class habitacionesController {
         //return $valor_hora;
     }
 
+	private function view(){
+		$habitacion = new habitaciones();
+
+        $habitacion = $habitacion->view($_POST['hbt']);
+			require "Vistas/habitacion/view.php";
+	    
+}
 }
 
  ?>
