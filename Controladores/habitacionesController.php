@@ -95,7 +95,10 @@ class habitacionesController {
 	private function view()
     {
         $habitacion = new habitaciones();
-        $habitacion = $habitacion->view($_POST['hbt']);
+        if($_POST['hbt']!= "")
+        	$habitacion = $habitacion->view($_POST['hbt']);
+        else
+        	$habitacion = $habitacion->listar();
         require "Vistas/habitacion/admin.php";
     }
 
