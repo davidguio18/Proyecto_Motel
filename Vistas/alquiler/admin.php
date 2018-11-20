@@ -1,6 +1,12 @@
 <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-qVp3sGZJcZdk20BIG6O0Sb0sYRyedif3+Z8bZtQueBW/g7Dp67a0XdiMmmWCCm82" crossorigin="anonymous">
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<?php include_once("Vistas/cabecera.php"); ?>
+<?php
+if ($_SESSION["Perfil"] == "Administrador"){
+    include_once ("Vistas/cabecera.php");
+}else if ($_SESSION["Perfil"] == "Vendedor"){
+    include_once ("Vistas/cabeceraVendedor.php");
+}
+?>
     <!-- MAIN CONTENT-->
     <div class="main-content">
         <div class="section__content section__content--p30">

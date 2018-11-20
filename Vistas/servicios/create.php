@@ -1,10 +1,13 @@
-
-<?php include_once ("Vistas/cabecera.php"); ?>
+<?php
+if ($_SESSION["Perfil"] == "Administrador"){
+    include_once ("Vistas/cabecera.php");
+}else if ($_SESSION["Perfil"] == "Vendedor"){
+    include_once ("Vistas/cabeceraVendedor.php");
+}
+?>
 
 <script type="js/jquery-3.3.1.min.js"></script>
-<?php include_once ("Vistas/cabecera.php"); ?>
-
-<div class="main-content">
+    <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
