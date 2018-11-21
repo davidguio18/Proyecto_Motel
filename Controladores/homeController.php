@@ -10,8 +10,11 @@
                     header("location: index.php?c=home&a=login");
 	        $_this = new homeController();
 			switch ($action) {
-				case "homeAdmmin":
-					$_this->homeAdmmin();
+                case "home":
+                    $_this->home();
+                    break;
+				case "homeAdmin":
+					$_this->homeAdmin();
 					break;
                 case "homeVendedor":
                     $_this->homeVendedor();
@@ -28,16 +31,12 @@
 		}
 
 
-
-		private function home()
-        {
-            header("location: index.php?c=habitaciones&a=admin2");
+        private function home(){
+            echo "falta poner la pagina";
         }
 
-		private function homeAdmmin(){
-		    echo "Hola";
-            header("location: Vistas/home/home.php");
-
+		private function homeAdmin(){
+            include("Vistas/home/home.php");
 		}
 
         private function homeVendedor(){
@@ -57,7 +56,7 @@
                     $_SESSION["Perfil"] = "Administrador";
 
                     echo "soy Administrador";
-                    header("location: index.php?c=home&a=homeAdmmin");
+                    header("location: index.php?c=home&a=homeAdmin");
                 }else if(password_verify($contrasena,$usuario->contrasena) && $usuario->perfil == "Vendedor"){
                     $_SESSION["Usuario"] = $usuario;
                     $_SESSION["Perfil"] = "Vendedor";
