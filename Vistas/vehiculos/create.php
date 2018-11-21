@@ -37,8 +37,7 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Registro</label>
-                                                 <input type="date" id="nf-email" name="Vehiculos[registro]" placeholder="Ingrese el registro" class="form-control" required onkeypress="return valida(event)">
-
+                                                 <input type="text" name="Vehiculos[registro]" readonly class="form-control" value="<?php echo date(' Y/m/d '); ?>">
                                             </div>
                                             
                                             </div>

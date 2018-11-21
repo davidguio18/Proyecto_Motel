@@ -10,7 +10,7 @@ if ($_SESSION["Perfil"] == "Administrador"){
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 
                                 <div class="card">
                                     <div class="card-header">
@@ -29,11 +29,19 @@ if ($_SESSION["Perfil"] == "Administrador"){
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Solicitud</label>
-                                                <input type="text" id="nf-email" name="Servicios[solicitud]" value="<?= $servicio->solicitud ?>" " class="form-control" >
+                                                <input type="text" id="nf-email" name="Servicios[solicitud]" readonly value="<?= $servicio->solicitud ?>" " class="form-control" >
                                             </div>
-                                             <div class="form-group">
-                                                <label for="nf-email" class=" form-control-label">Alquiler</label>
-                                                <input type="number" id="nf-email" name="Servicios[alquiler]" value="<?= $servicio->alquiler ?>" class="form-control" >
+
+                                                <input type="text" id="nf-email" name="Servicios[alquiler]" value="<?= $servicio->alquiler ?>" class="form-control" >
+                                            <div class="form-group">
+                                                <label for="nf-email" class="form-control-label">Alquiler</label>
+                                                <select required name="Servicios[alquiler]" class="form-control" >
+                                                    <option value="<?= $servicio->id_alquiler ?>"><?= $servicio->alquiler ?></option>
+                                                    <?php foreach ($codAlq as $codigoAlquiler) { ?>
+                                                        <option value="<?= $codigoAlquiler->id_alquiler ?>"> <?= $codigoAlquiler->id_alquiler ?></option>
+                                                    <?php } ?>
+                                                </select>
+
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Cantidad</label>
