@@ -29,12 +29,8 @@ if ($_SESSION["Perfil"] == "Administrador"){
                                                 <input type="date" id="nf-email" name="Vehiculos[registro]" value="<?= $vehiculo->registro ?>"placeholder="Ingrese el registro" class="form-control" required onkeypress="return valida(event)">
                                             </div>
                                             <div class="form-group">
-                                                <label value="<?= $vehiculo->servicio ?>" for="nf-email" class=" form-control-label">Servicio</label>
-                                                <select name="Vehiculos[servicio]" class="form-control" required>
-                                                     <option value="">Seleccione</option>
-                                                     <option value="Particular" >Particular</option>
-                                                     <option value="Publico" >Publico</option>
-                                                 </select>
+                                                <label  for="nf-email" class=" form-control-label">Servicio</label>
+                                                 <input type="text" id="nf-email" name="Vehiculos[servicio]" value="<?= $vehiculo->servicio ?>"placeholder="Ingrese el registro" class="form-control" require>
                                             </div>
                                             <div class="card-footer">
                                                  <button type="submit" class="btn btn-primary btn-sm">

@@ -32,6 +32,7 @@
 			<div class="card" style="height: 225px; width: 12rem; float:left; margin-left: 20px">
   			<img class="card-img-top" style=" height:150px; " src="http://www.qatarmotelcucuta.com/img/bebidas.jpg" alt="Card image cap">
   				<div class="card-body">
+
     			<a href="index.php?c=producto&a=admin" class="btn btn-primary">Productos</a>
   					 </div>
 

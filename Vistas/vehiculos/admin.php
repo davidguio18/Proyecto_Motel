@@ -44,7 +44,7 @@ if ($_SESSION["Perfil"] == "Administrador"){
 				                                <td class="desc"><?= $vehiculo->registro; ?></td>
 				                                
 				                                <td> <button type="submit" class="btn btn-primary btn-sm">
-                                                    <i class="fa fa-dot-circle-o"><a href="index.php?c=vehiculos&a=update&id=<?= $vehiculo->id_cliente; ?>" style="color:#f6f7f9;" >Editar</i> 
+                                                    <i class="fa fa-dot-circle-o"><a href="index.php?c=vehiculos&a=update&id=<?= $vehiculo->id_cliente; ?>" style="color:#f6f7f9;" >Editar</a></i> 
                                                 </button> </td>
 				                                <td> <button type="submit" class="btn btn-danger btn-sm">
                                                     <i class="fa fa-ban"><a href="index.php?c=vehiculos&a=delete&id=<?= $vehiculo->id_cliente; ?>" style="color:#f6f7f9;" ></i> Eliminar

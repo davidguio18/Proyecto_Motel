@@ -28,7 +28,7 @@ if ($_SESSION["Perfil"] == "Administrador"){
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Cantidad</label>
-                                                <input type="text" maxlength="15" id="nf-email" name="Productos[cantidad]" placeholder="Ingrese Cantidad de Producto.."  required onkeypress="return valida(event)" class="form-control" required>
+                                                <input type="number" maxlength="15" id="nf-email" name="Productos[cantidad]" placeholder="Ingrese Cantidad de Producto.."  class="form-control" required>
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Precio</label>

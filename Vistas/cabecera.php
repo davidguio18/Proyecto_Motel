@@ -30,7 +30,7 @@
     <link href="Vistas/resources/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
     <!-- Main CSS-->
     <link href="Vistas/resources/css/theme.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" type="text/css" href="fonts.css">
+   
 
 </head>
 
@@ -39,7 +39,7 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
+                <a href="#" style="color:#0e0e0e;">
                     <p>El Cristal Admin</p>
                 </a>
             </div>

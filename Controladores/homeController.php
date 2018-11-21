@@ -30,6 +30,7 @@
 			}
 		}
 
+
         private function home(){
             include ("portada.php");
         }

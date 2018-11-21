@@ -25,9 +25,9 @@ class habitacionesController {
 			case "admin":
 				$_this->admin();
 				break;
-            case "admin2":
-                $_this->admin2();
-                break;
+			case "admin2":
+				$_this->admin2();
+				break;
             case "getValor":
                 $_this->getvalor();
                 break;

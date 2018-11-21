@@ -66,6 +66,7 @@ class habitaciones extends Conexion {
 		$stm->execute();
 	}
 
+
 	public function delete($id){
 		$conexion = $this->getConexion();
 		$stm = $conexion->prepare("DELETE FROM habitaciones WHERE id_habitacion = :id");
@@ -86,20 +87,20 @@ class habitaciones extends Conexion {
 		}
 		return $habitaciones;
 	}
+	public function listar2(){
+		$conexion = $this->getConexion();
+		$stm = $conexion->prepare("SELECT * FROM habitaciones WHERE estado='Activo'");
+		$stm->setFetchMode(PDO::FETCH_CLASS,'habitaciones');
 
-    public function listar2(){
-        $conexion = $this->getConexion();
-        $stm = $conexion->prepare("SELECT * FROM habitaciones WHERE estado='Activo'");
-        $stm->setFetchMode(PDO::FETCH_CLASS,'habitaciones');
+		$habitaciones = array();
+		$stm->execute();
 
-        $habitaciones = array();
-        $stm->execute();
+		while ($obj = $stm->fetch()) {
+			$habitaciones[]=$obj;
+		}
+		return $habitaciones;
+	}
 
-        while ($obj = $stm->fetch()) {
-            $habitaciones[]=$obj;
-        }
-        return $habitaciones;
-    }
 
     public function update2(){
         $conexion = $this->getConexion();
