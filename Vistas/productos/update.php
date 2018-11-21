@@ -1,5 +1,10 @@
-
-<?php include_once ("Vistas/cabecera.php"); ?>
+<?php
+if ($_SESSION["Perfil"] == "Administrador"){
+    include_once ("Vistas/cabecera.php");
+}else if ($_SESSION["Perfil"] == "Vendedor"){
+    include_once ("Vistas/cabeceraVendedor.php");
+}
+?>
 
 <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -25,7 +30,7 @@
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Cantidad</label>
-                                                <input type="text" id="nf-email" name="Productos[cantidad]" placeholder="Ingrese Cantidad de Producto.." class="form-control" required value="<?= $producto->cantidad?>">
+                                                <input type="number" id="nf-email" name="Productos[cantidad]" placeholder="Ingrese Cantidad de Producto.." class="form-control" required value="<?= $producto->cantidad?>">
                                             </div>
                                              <div class="form-group">
                                                 <label for="nf-email" class=" form-control-label">Precio</label>

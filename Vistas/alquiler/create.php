@@ -1,4 +1,10 @@
-<?php include_once ("Vistas/cabecera.php"); ?>
+<?php
+if ($_SESSION["Perfil"] == "Administrador"){
+    include_once ("Vistas/cabecera.php");
+}else if ($_SESSION["Perfil"] == "Vendedor"){
+    include_once ("Vistas/cabeceraVendedor.php");
+}
+?>
 
     <div class="main-content">
         <div class="section__content section__content--p30">
