@@ -6,8 +6,8 @@
 
 		public static function main($action){
             // verificamos el inico de sesion
-            if (!isset($_SESSION["Usuario"]) && $_GET["a"] != "login")
-                    header("location: index.php?c=home&a=login");
+            if (!isset($_SESSION["Usuario"]) && $_GET["a"] != "login" && $_GET["a"] != "home")
+                    header("location: index.php?c=home&a=home");
 	        $_this = new homeController();
 			switch ($action) {
                 case "home":
@@ -31,7 +31,7 @@
 		}
 
         private function home(){
-            echo "falta poner la pagina";
+            include ("portada.php");
         }
 
 		private function homeAdmin(){
@@ -67,6 +67,7 @@
                     header("Location: index.php?c=home&a=login&error=true");
                 }
             }else{
+                session_destroy();
                 require "login.php";
             }
 		}
