@@ -68,7 +68,10 @@
 				header("Location: index.php?c=servicios&a=admin");
 
 			}else{
-			require "Vistas/servicios/update.php";
+                // carga el numero de las habitaciones Disponibles
+                $alq = new Alquiler();
+                $codAlq = $alq->listar();
+			    require "Vistas/servicios/update.php";
 
 			}
 		}
