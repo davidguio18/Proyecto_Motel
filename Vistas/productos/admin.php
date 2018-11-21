@@ -55,9 +55,9 @@ if ($_SESSION["Perfil"] == "Administrador"){
                                                 <td>
                                                     <div class="table-data-feature">
                                                         
-                                                         <a href="index.php?c=producto&a=update&id=<?=$producto->id_producto;?>">Editar</a>
+                                                         
                                                         <button type="submit" class="btn btn-primary btn-sm">
-                                                    <i class="fa fa-dot-circle-o"><a href="index.php?c=producto&a=update&id=<?=$producto->id_producto;?>" style="color:#f6f7f9;" >Editar</i> 
+                                                    <i class="fa fa-dot-circle-o"><a href="index.php?c=producto&a=update&id=<?=$producto->id_producto;?>">Editar</a></i> 
                                                 </button>
                                                           
                                                 </td>

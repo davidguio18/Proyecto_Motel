@@ -39,7 +39,7 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
+                <a href="#" style="color:#0e0e0e;">
                     <p>El Cristal Admin</p>
                 </a>
             </div>
