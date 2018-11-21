@@ -30,7 +30,7 @@
     <link href="Vistas/resources/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
     <!-- Main CSS-->
     <link href="Vistas/resources/css/theme.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" type="text/css" href="fonts.css">
+   
 
 </head>
 
