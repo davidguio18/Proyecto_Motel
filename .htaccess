@@ -1,1 +1,0 @@
-RewriteRule ^proyecto_motel/index/([a-zA-Z-]+)/([a-zA-Z-]+)$ proyecto_motel/index.php?c=$1&a=$2
